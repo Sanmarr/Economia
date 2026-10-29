@@ -2,6 +2,10 @@
 // FUNCIONES DE CUADROS DIDÁCTICOS (CALLOUTS)
 // ==========================================
 
+#let hl(content) = {
+  highlight(fill: rgb("#fcfe88"), content)
+}
+
 #let cuadro-concepto(titulo: [Concepto Clave], cuerpo) = block(
   width: 100%, inset: 10pt, radius: 4pt,
   fill: rgb("#e8f4f8"), stroke: (left: 4pt + rgb("#1b6ec2")),
@@ -58,33 +62,32 @@
 
 = Elasticidad e Intervención del Estado
 
-En la clase anterior estudiamos el funcionamiento del mecanismo de precios en un mercado libre y competitivo: cómo la interacción descentralizada entre compradores y vendedores determina el precio y la cantidad de equilibrio, maximizando el bienestar social medido a través de la suma de los excedentes del consumidor y del productor.
 
-Sin embargo, ese análisis nos indicaba únicamente la *dirección* cualitativa de los cambios (por ejemplo: "si el precio sube, la cantidad demandada cae"). En la toma de decisiones empresariales y en el diseño de políticas públicas, conocer la dirección no basta: es indispensable cuantificar la *magnitud* y la *sensibilidad* de la respuesta.
-- Si una empresa decide incrementar su precio de venta un 10%, ¿las ventas caerán un 2% o un 40%? De ello depende que los ingresos totales aumenten o se desplomen.
-- Si el Estado decide aplicar un impuesto específico de \$5 por unidad o fijar un precio máximo por debajo del equilibrio, ¿cuánto caerá la producción transada, quién absorberá efectivamente el costo financiero de la medida y cuánta ineficiencia social neta se generará?
-
-Esta clase aborda dos grandes pilares interconectados de la microeconomía aplicada:
-1. *La teoría de las elasticidades*: herramientas cuantitativas para medir la sensibilidad de oferentes y demandantes ante cambios en el precio propio, en el ingreso de los consumidores y en los precios de bienes relacionados.
+Se abordan dos grandes pilares interconectados de la microeconomía aplicada:
+1. *La teoría de las elasticidades*: Herramientas cuantitativas para medir la sensibilidad de oferentes y demandantes ante cambios en el precio propio, en el ingreso de los consumidores y en los precios de bienes relacionados.
 2. *La intervención estatal en los mercados*: análisis de bienestar social, redistribución y pérdida irrecuperable de eficiencia derivados de controles de precios (máximos y mínimos) y tributos indirectos, junto con el análisis de casos de coyuntura crítica como la traslación de costos a precios y la curva de Laffer.
 
----
 
-== 1. Elasticidad Precio de la Demanda: Definición y Métodos de Cálculo
+== Elasticidad Precio de la Demanda: Definición y Métodos de Cálculo
 
 #cuadro-concepto(titulo: [Definición de Elasticidad])[
-  La *elasticidad* es una medida cuantitativa y adimensional de la sensibilidad de una variable dependiente (por ejemplo, las decisiones de consumo o producción) frente a variaciones porcentuales en un factor exógeno que la determina (el precio del bien, el ingreso de los compradores o el precio de otros bienes sustitutos o complementarios).
+  La *elasticidad*:  Cuánto cambian las decisiones de 
+consumo o producción cuando cambia un factor 
+que las determina.
 ]
 
-La *elasticidad precio de la demanda* ($E_p$ o $epsilon _ p$) mide en qué porcentaje varía la cantidad demandada de un bien cuando su precio unitario varía en un 1%, manteniendo todas las demás variables constantes (_ceteris paribus_).
+La *elasticidad precio de la demanda* ($E_p$): Mide cuánto varía la cantidad cuando el precio varía en (_ceteris paribus_).
 
 $ E_p = ("%" Delta Q) / ("%" Delta P) $
 
+
+/*
 #cuadro-atencion(titulo: [¿Por qué usar variaciones porcentuales y no la pendiente simple?])[
   La pendiente de una función de demanda ordinaria ($(Delta Q) / (Delta P)$ o $(d Q) / (d P)$) depende enteramente de las unidades de medida elegidas (pesos, dólares, kilos, litros, toneladas). Si cambiamos la unidad de pesos a centavos, la pendiente numérica se multiplicaría por $100$, dando una falsa ilusión de mayor sensibilidad.
 
   La elasticidad resuelve este problema dividiendo las variaciones respecto de los niveles de partida ($(Delta Q / Q) / (Delta P / P)$), lo que genera un *coeficiente adimensional* (número puro sin unidades), permitiendo comparar la sensibilidad de bienes heterogéneos (por ejemplo, comparar la respuesta del mercado automotor con la del pan de mesa).
 ]
+*/
 
 === Métodos de Cálculo: Elasticidad Punto vs. Elasticidad Arco
 
@@ -96,7 +99,7 @@ Existen dos procedimientos analíticos fundamentales para computar la elasticida
      $ E_p = (Delta Q / Q) / (Delta P / P) = ((Delta Q) / (Delta P)) dot (P / Q) $
    - En forma infinitesimal (usando cálculo diferencial cuando se conoce la función matemática continua $Q(P)$):
      $ E_p = (d Q) / (d P) dot P / Q $
-   Donde $(d Q) / (d P)$ representa la derivada de la cantidad respecto al precio (la recíproca de la pendiente de la curva en el plano cartesiano estándar $(Q, P)$).
+   
 
 2. *Elasticidad arco o de punto medio*:
    Se utiliza cuando se dispone de datos discretos entre dos observaciones distantes $A = (P_1, Q_1)$ y $B = (P_2, Q_2)$. Si calculáramos el porcentaje respecto al punto de partida, el valor cambiaría dependiendo de si el precio sube de $A$ hacia $B$ o si baja de $B$ hacia $A$. Para evitar esta asimetría, se calcula la variación relativa respecto al valor promedio del intervalo:
@@ -109,9 +112,8 @@ Existen dos procedimientos analíticos fundamentales para computar la elasticida
   $ |E_p| = | ("%" Delta Q) / ("%" Delta P) | $
 ]
 
----
 
-== 2. Clasificación de la Demanda según su Elasticidad
+== Clasificación de la Demanda según su Elasticidad
 
 De acuerdo con la magnitud del coeficiente en valor absoluto $|E_p|$, las curvas o segmentos de demanda se categorizan en cinco tipos:
 
@@ -127,7 +129,7 @@ De acuerdo con la magnitud del coeficiente en valor absoluto $|E_p|$, las curvas
   [La cantidad demandada no responde en absoluto a variaciones en el precio. Gráficamente es una recta vertical.],
   [Insulina para diabéticos, medicamentos críticos de supervivencia.],
 
-  [Inelástica], [$0 < |E_p| < 1$],
+  [Inelástica], [$|E_p| < 1$],
   [La cantidad demandada varía en una proporción menor a la variación del precio ($"%" Delta Q < "%" Delta P$). Sensibilidad baja.],
   [Electricidad residencial, nafta a corto plazo, pan, sal.],
 
@@ -137,26 +139,31 @@ De acuerdo con la magnitud del coeficiente en valor absoluto $|E_p|$, las curvas
 
   [Elástica], [$|E_p| > 1$],
   [La cantidad demandada varía proporcionalmente más que el precio ($"%" Delta Q > "%" Delta P$). Alta sensibilidad.],
-  [Comidas en restaurantes, pasajes aéreos de turismo, marcas específicas de gaseosas.],
-
-  [Perfectamente Elástica], [$|E_p| -> oo$],
-  [A un precio dado los consumidores compran cualquier cantidad; un aumento infinitesimal del precio reduce la demanda a cero. Recta horizontal.],
-  [Empresa individual en competencia perfecta que vende un bien homogéneo.]
+  [Comidas en restaurantes, pasajes aéreos de turismo, marcas específicas de gaseosas.]
 )
+//#imagen("Curvas de demanda representativas según su elasticidad: perfectamente inelástica (vertical), elástica, unitaria y perfectamente elástica (horizontal)")
 
-#v(0.5em)
-#imagen("Curvas de demanda representativas según su elasticidad: perfectamente inelástica (vertical), elástica, unitaria y perfectamente elástica (horizontal)")
+#figure(
+  image("images/elasticidad.png", width: 105%),
+  caption: [Curvas de demanda representativas según su elasticidad]
+) <fig:elasticidad>
 
----
 
-== 3. Variación de la Elasticidad a lo largo de una Demanda Lineal e Ingreso Total
 
-#cuadro-atencion(titulo: [Error Frecuente: Pendiente Constante no significa Elasticidad Constante])[
-  En una curva de demanda lineal dada por $P = a - b Q$ (o $Q = a / b - 1 / b P$), la pendiente matemática $(d Q) / (d P) = -1 / b$ es constante en todos los puntos. Sin embargo, su elasticidad precio *no es constante*.
+== Variación de la Elasticidad a lo largo de una Demanda Lineal e Ingreso Total
+
+#cuadro-atencion(titulo: [Pendiente Constante no significa Elasticidad Constante])[
+
 
   Dado que $E_p = ((d Q) / (d P)) dot (P / Q)$, a medida que nos desplazamos a lo largo de la recta, el cociente $P / Q$ cambia drásticamente:
+  
   - Cerca del eje vertical ($P$ alto, $Q$ cercano a $0$), el ratio $P / Q -> oo$, por lo que la demanda es sumamente *elástica*.
+  
   - En el punto de corte con el eje horizontal ($P = 0, Q > 0$), el ratio $P / Q = 0$, resultando en una demanda perfectamente *inelástica*.
+
+  #figure(
+  image("images/ela.png", width: 40%)
+) <fig:ela>
 ]
 
 === Relación entre Demanda, Elasticidad e Ingreso Total ($"IT"$)
