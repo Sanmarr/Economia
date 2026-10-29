@@ -115,8 +115,10 @@ Resumen De Micro-Economia
 #include "files/micro/Clase1.typ"
 
 #pagebreak()
-#include "files/micro/Clase2.typ"
+//#include "files/micro/Clase2.typ"
 
+#pagebreak()
+//#include "files/micro/Clase3.typ"
 
 
 

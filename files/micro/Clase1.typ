@@ -56,6 +56,29 @@
   caption: desc, kind: image, supplement: [Figura],
 )
 
+
+// 
+// Colores y cajas
+// 
+#let azul = rgb("#1f5fa8")
+#let verde = rgb("#2e7d32")
+#let rojo = rgb("#c62828")
+#let naranja = rgb("#e65100")
+
+#let caja(titulo, color, cuerpo) = block(
+  width: 100%, inset: 8pt, radius: 3pt,
+  fill: color.lighten(92%),
+  stroke: (left: 2.5pt + color, rest: 0.5pt + color.lighten(55%)),
+)[
+  #text(weight: "bold", fill: color)[#titulo] \
+  #cuerpo
+]
+
+#let definicion(cuerpo) = caja("Definición", azul, cuerpo)
+#let ejemplo(cuerpo) = caja("Ejemplo", verde, cuerpo)
+#let importante(cuerpo) = caja("Importante", rojo, cuerpo)
+#let idea(cuerpo) = caja("Idea clave", naranja, cuerpo)
+
 // ==========================================
 // CONTENIDO DE LA CLASE 1
 // ==========================================
@@ -106,28 +129,38 @@ Un principio transversal de la microeconomía es que los agentes toman decisione
 
 Formalmente, si los beneficios económicos de una empresa vienen dados por la diferencia entre sus ingresos totales y sus costos totales:
 
-$ pi(q) = p dot q - C(q) $
+$ "Beneficios" =pi(q) = p dot q - C(q) $
 
 La condición necesaria de primer orden (CPO) para hallar el nivel de producción $q$ que maximiza el beneficio implica igualar la derivada primera a cero:
 
-$ (d pi)/(d q) = p - (d C(q))/(d q) = p - upright(C M g)(q) = 0 quad arrow.double quad p = upright(C M g)(q) $
+$ (d pi)/(d q) = p - (d C(q))/(d q) = 0 quad arrow.double quad p = C'(q) $
 
 #cuadro-registro(titulo: [Regla de Oro Marginalista])[
-  El beneficio se maximiza allí donde el *beneficio marginal* obtenido por la última unidad vendida (el precio $p$ en competencia) iguala exactamente al *costo marginal* ($upright(C M g)$) en que incurre la empresa para producirla.
+  El beneficio se maximiza allí donde el *beneficio marginal* obtenido por la última unidad vendida (el precio $p$ en competencia) iguala exactamente al *costo marginal* ($upright(C M g) = C'(q)$) en que incurre la empresa para producirla.
 ]
 
 === Teoría de la Utilidad y Utilidad Marginal Decreciente
 
 La *utilidad* es la capacidad o aptitud subjetiva que posee un bien o servicio para satisfacer las necesidades humanas. A partir de ella se derivan dos magnitudes:
+
 - *Utilidad Total ($U T$):* Nivel acumulado de satisfacción que experimenta un individuo al consumir una cantidad determinada de un bien.
+
 - *Utilidad Marginal ($U M g$):* Variación o incremento en la utilidad total como consecuencia del consumo de una unidad adicional del bien:
+
   $ upright(U M g) = (Delta U T)/(Delta q) $
+
+\
 
 #cuadro-concepto(titulo: [Ley de la Utilidad Marginal Decreciente])[
   A medida que un consumidor incrementa el consumo sucesivo de un bien en un período determinado, la satisfacción adicional que le reporta cada nueva unidad tiende a ser paulatinamente menor, aun cuando la utilidad total continúe en aumento.
 ]
 
----
+  #figure(
+  image("images/utilidad.png", width: 80%),
+  caption: [Ley de la Utilidad Marginal Decreciente]
+) <fig:utilidad>
+
+
 
 == La Demanda de Mercado
 
@@ -148,7 +181,7 @@ Existe una distinción conceptual central:
 === Ley de la Demanda y Curva de Demanda
 
 #cuadro-concepto(titulo: [Ley de la Demanda])[
-  Manteniendo constantes todos los demás factores (*ceteris paribus*), existe una *relación inversa* o negativa entre el precio de un bien y la cantidad demandada del mismo: *a mayor precio, menor cantidad demandada* 
+  Manteniendo constantes todos los demás factores (*ceteris paribus* / todo lo demás constante), existe una *relación inversa* o negativa entre el precio de un bien y la cantidad demandada del mismo: *a mayor precio, menor cantidad demandada* 
   $
   p arrow.t arrow.long.r Q_D arrow.b
   $
@@ -159,11 +192,23 @@ La curva de demanda presenta pendiente negativa debido a dos mecanismos compleme
 1. *Efecto sustitución:* Al aumentar el precio de un bien, éste se encarece relativamente frente a otros bienes que satisfacen necesidades análogas, motivando al consumidor a sustituirlo.
 2. *Efecto ingreso (o renta):* Al subir el precio del bien manteniendo constante el ingreso nominal, el poder adquisitivo real del consumidor se reduce, contrayendo su capacidad de compra de bienes normales.
 
+
+#figure(
+  image("images/demanda.png", width: 70%),
+  caption: [Curva de la demanda.]
+) <fig:demanda>
+
 === De la Demanda Individual a la Demanda de Mercado
 
 La *demanda de mercado* expresa las intenciones agregadas de compra de todos los consumidores que participan en él. Matemáticamente y gráficamente, se construye mediante la *suma horizontal* de las demandas individuales a cada nivel de precios:
 
 $ Q_D (p) = sum_(i=1)^N q_i (p) $
+
+#figure(
+  image("images/ejemplo.png", width: 70%),
+  caption: [Construcción de la Curva de Demanda de Mercado a partir de Demandas Individuales]
+) <fig:ejemplo>
+
 
 #cuadro-ejemplo(titulo: [Agregación Horizontal de la Demanda])[
   Imaginemos un mercado compuesto por dos consumidores ($A$ y $B$):
@@ -180,7 +225,15 @@ $ Q_D (p) = sum_(i=1)^N q_i (p) $
   Para cada nivel de precio, sumamos horizontalmente las cantidades deseadas: a $\$6$, $A$ compra 1 unidad y $B$ compra 2 unidades; la demanda de mercado es 3 unidades.
 ]
 
-#imagen("Construcción de la Curva de Demanda de Mercado a partir de Demandas Individuales")
+#figure(
+  image("images/offer.png", width: 40%),
+  caption: [Construcción de la Curva de Demanda de Mercado a partir de demandas Individuales ]
+) <fig:supply>
+
+
+
+
+//#imagen("Construcción de la Curva de Demanda de Mercado a partir de Demandas Individuales")
 
 === Determinantes de la Demanda
 
@@ -189,8 +242,8 @@ La cantidad demandada de un bien $X$ depende funcionalmente de múltiples variab
 $ Q_D^X = f(P_X, P_"relacionados", Y, G, E, "Pob", "Otros") $
 
 Bajo la cláusula *ceteris paribus*, analizamos el efecto individual de cada determinante:
-
-+ *Precio del propio bien ($P_X$):* Provoca variaciones en la cantidad demandada (movimientos a lo largo de la curva).
+/*
++ *Precio del propio bien*($P_X$): Provoca variaciones en la cantidad demandada (movimientos a lo largo de la curva).
 + *Precio de bienes relacionados ($P_Y$):*
   - *Bienes sustitutos:* Aquellos que satisfacen una necesidad semejante. Si sube el precio de la carne vacuna, los consumidores migran al pollo ($P_"carne" arrow.t arrow.long.r D_"pollo" arrow.t$, la curva se desplaza a la derecha).
   - *Bienes complementarios:* Aquellos que se consumen de manera conjunta. Si sube el precio de la nafta, disminuye el uso y la demanda de automóviles ($P_"nafta" arrow.t arrow.long.r D_"autos" arrow.b$, la curva se desplaza a la izquierda).
@@ -201,20 +254,30 @@ Bajo la cláusula *ceteris paribus*, analizamos el efecto individual de cada det
 + *Expectativas sobre el futuro ($E$):* Expectativas sobre ingresos futuros o sobre precios futuros. La expectativa de un fuerte aumento de precios el próximo mes adelanta compras e incrementa la demanda presente.
 + *Tamaño y composición de la población ("Pob"):* Un aumento en el número de habitantes desplaza la demanda agregada hacia la derecha, aun con consumo per cápita constante.
 + *Factores contextuales o estacionales ("Otros"):* El clima, la estación del año (demanda de helados en verano o abrigos en invierno) y emergencias públicas.
+*/
+
+#figure(
+  image("images/demanda3.png", width: 100%)
+) <fig:demanda3>
 
 === Excedente del Consumidor ($E C$)
 
 El *Excedente del Consumidor* es una medida cuantitativa del bienestar económico que obtienen los compradores al participar en el mercado.
 
-- *Definición analítica:* Es la suma, sobre todas las unidades adquiridas, de la diferencia entre lo máximo que el consumidor estaba dispuesto a pagar por cada unidad (su beneficio marginal o DAP) y el precio de mercado efectivamente pagado:
+- *Definición analítica:* Es la suma, sobre todas las unidades adquiridas, de #hl[la diferencia entre lo máximo que el consumidor estaba dispuesto a pagar por cada unidad (su beneficio marginal o DAP) y el precio de mercado efectivamente pagado]:
   $ E C = sum (D A P - P^*) quad "o de forma continua" quad E C = integral_0^(Q^*) [P_D (q) - P^*] d q $
-- *Definición geométrica:* Es el área situada *por debajo de la curva de demanda* y *por encima del precio de equilibrio* del mercado ($P^*$), delimitada entre $q = 0$ y $q = Q^*$.
+
 - En el caso de una curva de demanda lineal con intercepto vertical (precio de reserva máximo) $P_max$:
   $ E C = 1/2 dot Q^* dot (P_max - P^*) $
 
-#imagen("Representación gráfica del Excedente del Consumidor (área bajo la curva de demanda y sobre el precio)")
+//#imagen("Representación gráfica del Excedente del Consumidor (área bajo la curva de demanda y sobre el precio)")
 
----
+#figure(
+  image("images/demanda2.png", width: 40%),
+  caption: [Representación gráfica del Excedente del Consumidor ]
+) <fig:demanda2>
+
+
 
 == La Oferta de Mercado
 
@@ -236,7 +299,7 @@ La curva de oferta individual refleja directamente el *Costo Marginal ($upright(
   Manteniendo constantes todos los demás determinantes (*ceteris paribus*), existe una relación directa o positiva entre el precio de un bien y la cantidad ofrecida del mismo: a mayor precio, mayor cantidad ofrecida ($p arrow.t arrow.long.r Q_S arrow.t$).
 ]
 
-La curva de oferta posee pendiente positiva debido a que, a corto plazo, rige la *Ley de Rendimientos Marginales Decrecientes*: al incrementar la producción con factores fijos (como la planta o la maquinaria), el costo marginal de fabricar unidades adicionales se vuelve creciente. Por tanto, las empresas solo estarán dispuestas a expandir la producción si el precio de mercado se eleva lo suficiente como para cubrir esos mayores costos marginales.
+La curva de oferta posee pendiente positiva debido a que, a corto plazo, rige la *Ley de Rendimientos Marginales Decrecientes*: #hl[al incrementar la producción con factores fijos] (como la planta o la maquinaria), #hl[el costo marginal de fabricar unidades adicionales se vuelve creciente]. Por tanto, las empresas solo estarán dispuestas a expandir la producción si el precio de mercado se eleva lo suficiente como para cubrir esos mayores costos marginales.
 
 === De la Oferta Individual a la Oferta de Mercado
 
@@ -259,7 +322,12 @@ $ Q_S (p) = sum_(j=1)^M q_j (p) $
   A un precio de $\$2$, la empresa $Y$ no cubre sus costos mínimos de arranque y ofrece 0, mientras que $X$ ofrece 1. A $\$6$, la oferta agregada de mercado es $2 + 1 = 3$.
 ]
 
-#imagen("Construcción de la Curva de Oferta de Mercado a partir de Ofertas Individuales")
+#figure(
+  image("images/supply.png", width: 40%),
+  caption: [Construcción de la Curva de Oferta de Mercado a partir de Ofertas Individuales ]
+) <fig:supply>
+
+//#imagen("Construcción de la Curva de Oferta de Mercado a partir de Ofertas Individuales")
 
 === Determinantes de la Oferta
 
@@ -269,30 +337,40 @@ $ Q_S^X = g(P_X, P_"factores", "Tecnología", E, "Clima", N) $
 
 Analizando cada factor bajo la cláusula *ceteris paribus*:
 
+#figure(
+  image("images/supply2.png", width: 100%)
+) <fig:supply2>
+
+/*
 + *Precio del bien ($P_X$):* Genera movimientos a lo largo de la curva de oferta (variación en la cantidad ofrecida).
 + *Precio de los factores productivos ($P_"factores"$):* Los salarios, materias primas, costos energéticos y tasa de interés constituyen el costo de producción. Una suba salarial incrementa el costo marginal y contrae la oferta (desplazamiento a la izquierda). Una reducción de costos abarata la producción y desplaza la oferta a la derecha.
 + *Tecnología y productividad:* Las innovaciones tecnológicas y mejoras en los métodos de producción reducen los costos unitarios para cualquier nivel de producto, desplazando la curva de oferta hacia la derecha ($S arrow.t$).
 + *Expectativas ($E$):* Si las empresas esperan que los precios caigan en el futuro (por ejemplo, debido a una próxima apertura comercial), aumentarán su oferta actual para vender sus existencias hoy.
 + *Clima y condiciones agroecológicas:* Factores determinantes en mercados agrícolas, energéticos y pesqueros. Un régimen de lluvias óptimo incrementa la oferta de trigo; una helada tardía o una granizada destruye cosechas y contrae fuertemente la oferta ($S arrow.b$).
 + *Número de oferentes ($N$):* El ingreso de nuevas firmas a la industria desplaza la oferta agregada hacia la derecha.
-
+*/
 === Excedente del Productor ($E P$)
 
 El *Excedente del Productor* representa la ganancia o beneficio neto que los vendedores obtienen al comerciar en el mercado.
 
 - *Definición analítica:* Es la diferencia acumulada entre el precio de mercado efectivamente cobrado ($P^*$) y el costo marginal mínimo al que los oferentes estaban dispuestos a vender cada unidad:
   $ E P = sum (P^* - upright(C M g)) quad "o de forma continua" quad E P = integral_0^(Q^*) [P^* - P_S (q)] d q $
-- *Definición geométrica:* Es el área situada *por encima de la curva de oferta* y *por debajo del precio de mercado* ($P^*$), comprendida entre $q = 0$ y $q = Q^*$.
+
 - Para una curva de oferta lineal con precio de reserva mínimo $P_min$:
   $ E P = 1/2 dot Q^* dot (P^* - P_min) $
+
+
+#figure(
+  image("images/supply3.png", width: 40%),
+  caption: [Excedente del Productor ($E P$)]
+) <fig:supply>
 
 #cuadro-concepto(titulo: [Lectura Económica del Excedente del Productor])[
   El Excedente del Productor mide los ingresos obtenidos por encima del costo variable de producción. Este excedente permite a las firmas cubrir sus costos fijos y generar utilidades netas, posibilitando la reinversión en capital, tecnología y desarrollo productivo.
 ]
 
-#imagen("Representación gráfica del Excedente del Productor (área sobre la curva de oferta y bajo el precio)")
+//#imagen("Representación gráfica del Excedente del Productor (área sobre la curva de oferta y bajo el precio)")
 
----
 
 == Movimientos a lo Largo de la Curva vs. Desplazamientos
 
