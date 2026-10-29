@@ -49,7 +49,7 @@ margin: (
 #align(center)[#text(size: 24pt)[Instituto Tecnológico de Buenos Aires]] 
 
 #figure(
-  image("files/images/indice/itbaSVG_white.svg", width: 30%)
+  image("files/images/indice/itbaSVG_white.svg", width: 60%)
 ) <fig:indice>
 
 #title[
@@ -57,11 +57,6 @@ margin: (
 
 Resumen De Micro-Economia
 ]
-
-
-
-\
-
 
 //Aca Termina la caratula
 #set page(
@@ -77,20 +72,50 @@ Resumen De Micro-Economia
   columns: 2,
 )
 
+// Personalización estilizada de los títulos
+#show heading.where(level: 1): it => block(
+  width: 100%,
+  fill: rgb("#eef3f8"),
+  inset: (x: 10pt, y: 8pt),
+  radius: 4pt,
+  stroke: (left: 4pt + rgb("#1a3a6b")),
+  above: 1.6em,
+  below: 1em,
+)[
+  #text(size: 14pt, weight: "bold", fill: rgb("#1a3a6b"))[#it.body]
+]
+
+#show heading.where(level: 2): it => block(
+  above: 1.3em,
+  below: 0.7em,
+)[
+  #text(size: 14pt, weight: "bold", fill: rgb("#2b5b84"))[#it.body]
+  #v(2pt)
+  #line(length: 100%, stroke: 0.5pt + rgb("#cbd5e1"))
+]
+
+#show heading.where(level: 3): it => block()[
+  #text(size: 12pt, weight: "bold", fill: rgb("#2b5b84"))[#it.body]
+]
+
 #pagebreak()
-#set page(columns: 1, fill: rgb("#ffffff"))
-#set text(fill: rgb("#000000"))
+#set page(fill: rgb("#ffffff"))
+#set text(size: 12pt, fill: rgb("#000000"))
 
 #set page(numbering: "1 of 1")
-#set heading(numbering: "1. 1. 1. 1")
+#set heading(numbering: none)
+
 
 #set page(columns: 2)
-#outline()
+#outline(depth: 2)
 #set page(columns: 1)
 
 
 #pagebreak()
 #include "files/micro/Clase1.typ"
+
+#pagebreak()
+#include "files/micro/Clase2.typ"
 
 
 
