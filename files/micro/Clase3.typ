@@ -50,7 +50,7 @@
 
 // ============================================================
 
-= Clase 3: Teoría de la Producción
+= Teoría de la Producción
 
 La empresa es el origen de la oferta. Para producir bienes y servicios necesita *factores de producción*: principalmente *capital* (K) y *trabajo* (L). La teoría de la producción estudia cómo estos factores se combinan para generar producto.
 

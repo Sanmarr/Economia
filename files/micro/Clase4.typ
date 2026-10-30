@@ -50,7 +50,7 @@
 
 // ============================================================
 
-= Clase 4: Costos
+= Costos
 
 En la clase anterior analizamos la *producción* sin asignar precio a los factores. Ahora introducimos los *costos*: dada la tecnología y los precios de los factores, ¿cuánto cuesta producir cada cantidad? ¿Cómo elegir la combinación más barata?
 

@@ -580,6 +580,7 @@ Este caso enseña una lección metodológica crucial: #hl[*el modelo de oferta y
   )
 ]
 
+/*
 #pagebreak()
 == Ejercicios de Ejemplo
 

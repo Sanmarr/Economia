@@ -53,7 +53,7 @@
 
 // ============================================================
 
-= Clase 5: Competencia Perfecta
+= Competencia Perfecta
 
 En la clase anterior estudiamos los costos de producción. Ahora usamos esas curvas para responder una pregunta central: *dado el precio de mercado, ¿cuánto produce una empresa y cuándo le conviene cerrar?* En competencia perfecta, cada empresa toma el precio como dado; de su decisión individual se deriva la oferta del mercado.
 
