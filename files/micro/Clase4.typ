@@ -58,7 +58,7 @@ En la clase anterior analizamos la *producción* sin asignar precio a los factor
 
 === Costo Contable vs. Costo Económico
 
-#cuadro-concepto(titulo: [Costo Contable y Costo Económico])[
+
   #table(
     columns: (1fr, 1fr),
     align: (left, left),
@@ -69,7 +69,7 @@ En la clase anterior analizamos la *producción* sin asignar precio a los factor
   )
 
   Del costo contable al económico se suma el *costo de oportunidad* y se excluyen los *costos hundidos*.
-]
+
 
 #cuadro-concepto(titulo: [Costo de Oportunidad])[
   El *costo de oportunidad* es el valor del mejor uso alternativo al que se renuncia. Ejemplos:
@@ -89,13 +89,18 @@ En la clase anterior analizamos la *producción* sin asignar precio a los factor
 ]
 
 #cuadro-atencion(titulo: [La falacia del costo hundido])[
-  "Ya gasté tanto en el equipo, no puedo cerrar ahora." → *Error*. El dinero del equipo ya está perdido sin importar la decisión. La pregunta correcta es: *¿los ingresos futuros superan los costos futuros (no hundidos)?*
+  'Ya gasté tanto en el equipo, no puedo cerrar ahora.' → *Error*. 
+  
+  El dinero del equipo ya está perdido sin importar la decisión. La pregunta correcta es: *¿los ingresos futuros superan los costos futuros (no hundidos)?*
 
   Continuar conviene si: ingresos > costos evitables.
 ]
 
 #cuadro-ejemplo(titulo: [La cervecería de Laura])[
-  Datos anuales (millones de \$):
+ 
+ #figure(
+    image("images/laura.png", width: 65%)
+  )
 
   #table(
     columns: (auto, auto, auto),
@@ -120,9 +125,9 @@ En la clase anterior analizamos la *producción* sin asignar precio a los factor
 
 Con al menos un factor fijo (capital $K$), los costos se dividen en fijos y variables.
 
-#cuadro-concepto(titulo: [Costos de corto plazo])[
+#align(center)[
   #table(
-    columns: (auto, 1fr, 1fr),
+    columns: (auto, auto, auto),
     align: (left, left, left),
     stroke: 0.5pt,
     table.header([*Concepto*], [*Fórmula*], [*Qué mide*]),
@@ -138,19 +143,19 @@ Con al menos un factor fijo (capital $K$), los costos se dividen en fijos y vari
 
 === De la Función de Costos a las Curvas
 
-Con la función de costos $C T = 32 + 30q - 6q^2 + q^3$:
+//#imagen("Gráfico CT, CV y CF: CT es CV desplazado hacia arriba en CF. CV tiene forma de S. CF es línea horizontal.")
 
-- $C F = 32$ (el término constante)
-- $C V = 30q - 6q^2 + q^3$
-- $C M g = (d C T) / (d q) = 30 - 12q + 3q^2$
+#figure(
+    image("images/func_costos.png", width: 100%)
+)
 
-El *CV* crece primero a ritmo decreciente (cuando el PMg del trabajo sube) y luego a ritmo creciente (cuando el PMg cae). El punto de inflexión del CV coincide con el mínimo del CMg.
-
-#imagen("Gráfico CT, CV y CF: CT es CV desplazado hacia arriba en CF. CV tiene forma de S. CF es línea horizontal.")
+#figure(
+    image("images/func_costos2.png", width: 100%)
+)
 
 === Curvas de Costos Medios y Marginal
 
-#imagen("Gráfico costos unitarios: CMg en U, CTMe en U (más a la derecha), CVMe en U, CFMe siempre decreciente. CMg corta CVMe y CTMe en sus mínimos.")
+//#imagen("Gráfico costos unitarios: CMg en U, CTMe en U (más a la derecha), CVMe en U, CFMe siempre decreciente. CMg corta CVMe y CTMe en sus mínimos.")
 
 #cuadro-concepto(titulo: [Relaciones entre CMg, CTMe y CVMe])[
   1. *El CMg corta al CVMe y al CTMe en sus mínimos:*
@@ -191,7 +196,7 @@ La U del CMg es exactamente la U invertida del PMg, reflejada.
 
   Verificación con $C M g = w / P M g_L$:
 
-  $ P M g_L = (200) / (q) => C M g = (w q) / (200) checkmark $
+  $ P M g_L = (200) / (q) => C M g = (w q) / (200)  $
 ]
 
 == Largo Plazo: Minimización de Costos
@@ -216,15 +221,19 @@ En el largo plazo, *todos* los factores son variables. La empresa elige la combi
   Con $w$ y $r$ dados, *todas las isocostos son paralelas*. Mayor costo → más lejos del origen.
 ]
 
-#imagen("Familia de isocostos paralelas con pendiente -w/r en el plano (L, K). Líneas para CT=3, CT=4, CT=5.")
+//#imagen("Familia de isocostos paralelas con pendiente -w/r en el plano (L, K). Líneas para CT=3, CT=4, CT=5.")
+
+#figure(
+  image("images/isocosto.png", width: 40%)
+)
 
 === El Problema de Minimización de Costos
 
-$ min_(L, K) space w L + r K quad "sujeto a" quad F(K, L) = macron(q) $
+$ min_(L, K) space \[w L + r K\] quad "sujeto a" quad F(K, L) = macron(q) $
 
 Geométricamente: encontrar la isocosto *más baja* que toque la isocuanta $q = macron(q)$.
 
-#imagen("Minimización: isocuanta q=20 tangente a la isocosto mínima CT=4 en punto A. Puntos B y C sobre isocostos más altas.")
+//#imagen("Minimización: isocuanta q=20 tangente a la isocosto mínima CT=4 en punto A. Puntos B y C sobre isocostos más altas.")
 
 === Condición de Mínimo Costo
 
@@ -257,7 +266,10 @@ Si *sube* $w$, la isocosto se vuelve más *empinada*:
 - La empresa *sustituye* el factor encarecido.
 - El costo sube, pero *menos* que si no pudiera sustituir.
 
-#imagen("Cambio en óptimo cuando sube w: isocosto más empinada, punto A se mueve a B (más K, menos L) sobre la misma isocuanta q=20.")
+#figure(
+  image("images/isocostoDelta.png", width: 50%),
+  caption:[Cambio en óptimo cuando sube w: isocosto más empinada, punto A se mueve a B (más K, menos L) sobre la misma isocuanta q=20.]
+)
 
 #cuadro-ejemplo(titulo: [Los bancos de Juan — $q = 0,1 K^(0,2) L^(0,8)$, w = r = 50])[
   *a) ¿Es eficiente K = L = 100?*
@@ -274,6 +286,7 @@ Si *sube* $w$, la isocosto se vuelve más *empinada*:
 
   $ T M S T = (4K) / (L) = 2 => L = 2K => K^* approx 57,43, L^* approx 114,87, C^* approx 14.358 $
 
+  #align(center)[
   #table(
     columns: (auto, auto, auto, auto),
     align: (left, center, center, center),
@@ -282,10 +295,11 @@ Si *sube* $w$, la isocosto se vuelve más *empinada*:
     [w = 50 (óptimo)],         [131,95], [32,99], [8.247],
     [w = 100 sin sustituir],   [131,95], [32,99], [14.844],
     [w = 100 nuevo óptimo],    [114,87], [57,43], [14.358],
-  )
+  )]
 
   El costo sube ~74%, no 100%: la sustitución amortigua el impacto y ahorra ~486.
 ]
+
 
 === Sendero de Expansión y Costo de Largo Plazo
 
@@ -297,10 +311,13 @@ Si *sube* $w$, la isocosto se vuelve más *empinada*:
   - El *Costo Medio de Largo Plazo (CMeLP)* $= C T L P / q$.
 ]
 
-#imagen("Sendero de expansión: línea recta desde el origen que une las tangencias para q=20, q=30, q=40 en plano (L, K).")
+
+
+
+//#imagen("Sendero de expansión: línea recta desde el origen que une las tangencias para q=20, q=30, q=40 en plano (L, K).")
 
 Ejemplo (panadería, $w = r = 1$):
-
+#align(center)[
 #table(
   columns: (auto, auto, auto, auto, auto),
   align: (center, center, center, center, center),
@@ -309,9 +326,13 @@ Ejemplo (panadería, $w = r = 1$):
   [20], [2], [2], [4], [0,2],
   [30], [3], [3], [6], [0,2],
   [40], [4], [4], [8], [0,2],
-)
+)]
 
 CMeLP constante → rendimientos constantes a escala ($alpha + beta = 1$).
+
+#figure(
+  image("images/sendero.png", width: 40%)
+)
 
 === Corto Plazo vs. Largo Plazo: ¿Por Qué el Corto Cuesta Más?
 
@@ -323,7 +344,11 @@ $ C T "CP" >= C T "LP" $
 
 Son iguales *solo* donde el $K$ fijo coincide con el óptimo de largo plazo.
 
-#imagen("Plano (L, K): A = óptimo para q1 con K1; C = corto plazo para q2 (costoso); B = largo plazo para q2 (más barato). Muestra CP >= LP.")
+#figure(
+  image("images/planoLK.png", width: 40%)
+)
+
+//#imagen("Plano (L, K): A = óptimo para q1 con K1; C = corto plazo para q2 (costoso); B = largo plazo para q2 (más barato). Muestra CP >= LP.")
 
 == Largo Plazo: Economías de Escala
 
@@ -338,9 +363,13 @@ Son iguales *solo* donde el $K$ fijo coincide con el óptimo de largo plazo.
   Con más $K$, la CMeCP se desplaza a la derecha: mayor costo fijo, pero los rendimientos marginales decrecientes llegan más tarde.
 ]
 
-#imagen("CMeCP1, CMeCP2, CMeCP3 (tamaños de planta crecientes) con la CMeLP como envolvente por debajo de todas, tocando cada una en un punto.")
+//#imagen("CMeCP1, CMeCP2, CMeCP3 (tamaños de planta crecientes) con la CMeLP como envolvente por debajo de todas, tocando cada una en un punto.")
 
-=== Economías y Deseconomías de Escala
+#figure(
+  image("images/CMeCP.png", width: 50%)
+)
+
+=== Economías y Deseconomíasde Escala
 
 #cuadro-concepto(titulo: [Economías de escala y Escala Eficiente Mínima (EEM)])[
   #table(
@@ -367,7 +396,11 @@ Son iguales *solo* donde el $K$ fijo coincide con el óptimo de largo plazo.
 - Congestión y burocracia.
 - Dificultad de monitorear empleados.
 
-#imagen("CMeLP en U con CMgLP cruzándola en el mínimo (EEM). Zona de economías a la izquierda, deseconomías a la derecha.")
+//#imagen("CMeLP en U con CMgLP cruzándola en el mínimo (EEM). Zona de economías a la izquierda, deseconomías a la derecha.")
+
+#figure(
+  image("images/EEM.png", width: 50%)
+)
 
 === Economías de Escala vs. Rendimientos a Escala
 
@@ -413,6 +446,7 @@ Son iguales *solo* donde el $K$ fijo coincide con el óptimo de largo plazo.
   )
 ]
 
+/*
 == Síntesis
 
 #cuadro-registro(titulo: [Mapa de conceptos — Clase 4])[
@@ -431,7 +465,4 @@ Son iguales *solo* donde el $K$ fijo coincide con el óptimo de largo plazo.
     [Economías de escala],       [$C M g L P < C M e L P$ → CMeLP cae al crecer $q$],
   )
 ]
-
-#cuadro-atencion(titulo: [Próxima clase — Oferta Competitiva])[
-  Con los costos de hoy y un precio de mercado dado, ¿cuánto conviene producir? De ahí se deriva la *curva de oferta de la empresa* y la *oferta de mercado* en competencia perfecta.
-]
+*/

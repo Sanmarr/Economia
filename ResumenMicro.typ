@@ -110,6 +110,8 @@ Resumen De Micro-Economia
 #outline(depth: 2)
 #set page(columns: 1)
 
+#set math.equation(numbering: none)
+
 
 #pagebreak()
 #include "files/micro/Clase1.typ"

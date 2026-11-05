@@ -48,6 +48,12 @@
   ]
 )
 
+
+
+
+
+
+
 // ============================================================
 
 = Teoría de la Producción
@@ -86,19 +92,19 @@ La distinción corto/largo plazo no depende de un número fijo de meses; se defi
 
 Con $K$ fijo, el análisis se concentra en cómo varía la producción al agregar trabajo.
 
-#cuadro-concepto(titulo: [Las tres medidas de producción])[
+
   #table(
-    columns: (auto, 1fr, 1fr),
-    align: (left, left, left),
+    columns: (auto, 0.5fr, 1fr),
+    align: (center, left, left),
     stroke: 0.5pt,
     table.header(
       [*Medida*], [*Fórmula*], [*Qué mide*]
     ),
-    [Producto Total (PT)],   [$q = F(macron(K), L)$],            [Cuánto se produce con cada cantidad de $L$.],
-    [Producto Medio ($P M e_L$)],  [$(q) / (L)$],          [Producción por trabajador. Mide la productividad laboral.],
-    [Producto Marginal ($P M g_L$)], [$(partial q) / (partial L)$ o $(Delta q) / (Delta L)$], [Cuánto sube $q$ si $L$ aumenta una unidad, con $K$ fijo.],
+    [Producto Total (PT)],   [$q = F(macron(K), L) =F(L)$],            [Cuánto se produce con cada cantidad de $L$.],
+    [Producto Medio ($P M e_L$)],  [$P M e_L = (q) / (L)$],          [Producción por trabajador. Mide la productividad laboral.],
+    [Producto Marginal ($P M g_L$)], [$P M g_L = S(partial q) / (partial L)$ o $(Delta q) / (Delta L)$], [Cuánto sube $q$ si $L$ aumenta una unidad, con $K$ fijo.],
   )
-]
+
 
 #cuadro-registro(titulo: [Derivadas parciales en la función Cobb–Douglas])[
   Para $q = 10 K^(0,5) L^(0,5)$:
@@ -112,35 +118,15 @@ Con $K$ fijo, el análisis se concentra en cómo varía la producción al agrega
 
 === Tabla de ejemplo (K = 10)
 
-#table(
-  columns: (auto, auto, auto, auto, auto),
-  align: (center, center, center, center, center),
-  stroke: 0.5pt,
-  table.header(
-    [*L*], [*K*], [*PT (q)*], [*PMe*], [*PMg*]
-  ),
-  [0],  [10], [0],   [—],   [—],
-  [1],  [10], [10],  [10],  [10],
-  [2],  [10], [30],  [15],  [20],
-  [3],  [10], [60],  [20],  [30],
-  [4],  [10], [80],  [20],  [20],
-  [5],  [10], [95],  [19],  [15],
-  [6],  [10], [108], [18],  [13],
-  [7],  [10], [112], [16],  [4],
-  [8],  [10], [112], [14],  [0],
-  [9],  [10], [108], [12],  [−4],
-  [10], [10], [100], [10],  [−8],
+#figure(
+  image("images/ejemplo10.png", width: 90%)
 )
 
-Observaciones clave de la tabla:
-- El *PMg crece* hasta $L = 3$ (llega a 30) y luego *cae*: desde $L = 4$ rigen los rendimientos marginales decrecientes.
-- El *PMe máximo* (20) se alcanza en $L = 3$ y $L = 4$; en $L = 4$ el PMg coincide con el PMe.
-- En $L = 8$, $P M g = 0$: el octavo trabajador no agrega producción → el PT es *máximo*.
-- Desde $L = 9$, $P M g < 0$: agregar trabajadores *reduce* la producción.
 
-=== Las tres curvas y cómo se relacionan
+#figure(
+  image("images/curvas.png", width: 50%)
+)
 
-#imagen("Gráfico de las tres curvas: PT arriba, PMg y PMe abajo. Puntos B (PMg máximo) y D (PMe máximo = intersección PMg-PMe)")
 
 #cuadro-concepto(titulo: [Relaciones entre PT, PMe y PMg])[
   1. *PMg es la pendiente del PT:* mientras $P M g > 0$, el PT crece. Cuando $P M g = 0$, el PT alcanza su máximo (punto C).
@@ -165,6 +151,7 @@ Observaciones clave de la tabla:
 
 *¿Por qué ocurre?* El factor fijo ($K$) se reparte entre más unidades del variable ($L$): cada trabajador adicional dispone de *menos capital* con el cual trabajar.
 
+#align(center)[
 #table(
   columns: (auto, auto, auto, auto, auto, auto),
   align: (center, center, center, center, center, center),
@@ -175,6 +162,7 @@ Observaciones clave de la tabla:
   [K fijo], [10], [10], [10], [10], [10],
   [K por trabajador], [10], [3,3], [2], [1,25], [1],
 )
+]
 
 La ley rige con la *tecnología dada* y los *demás factores fijos*. No es una ley universal: si todos los factores crecen, puede haber rendimientos crecientes (ver largo plazo).
 
@@ -189,7 +177,11 @@ Una mejora tecnológica *desplaza hacia arriba* la función de producción: con 
 - No cambia la *forma* de la curva: los rendimientos marginales siguen siendo decrecientes.
 - Si la mejora multiplica el producto por un factor constante $m$, entonces PT, PMg y PMe se multiplican todos por $m$.
 
-#imagen("Gráfico PT antes y después de la mejora tecnológica: curva nueva desplazada hacia arriba, misma forma convexa")
+//#imagen("Gráfico PT antes y después de la mejora tecnológica: curva nueva desplazada hacia arriba, misma forma convexa")
+
+#figure(
+  image("images/nueva_tech.png", width: 50%)
+)
 
 #cuadro-ejemplo(titulo: [Ejemplo — La panadería (K = 4)])[
   $q = F(K, L) = 10 K^(0,5) L^(0,5)$. Con $K = 4$:
@@ -200,19 +192,9 @@ Una mejora tecnológica *desplaza hacia arriba* la función de producción: con 
 
   $ P M e_L = (q) / (L) = (20) / (L^(0,5)) $
 
-  #table(
-    columns: (auto, auto, auto, auto),
-    align: (center, center, center, center),
-    stroke: 0.5pt,
-    table.header([*L*], [*PT*], [*PMg_L*], [*PMe_L*]),
-    [1],  [20],  [10],    [20],
-    [4],  [40],  [5],     [10],
-    [9],  [60],  [3,33],  [6,67],
-    [16], [80],  [2,5],   [5],
-    [25], [100], [2],     [4],
+  #figure(
+    image("images/ejemplok4.png", width: 100%)
   )
-
-  El PMg cae con $L$ ($(d P M g_L) / (d L) = -5 L^(-3/2) < 0$): los 4 hornos se reparten entre más trabajadores. *Con una mejora que sube el coeficiente de 10 a 15*, todos los valores de PT, PMg y PMe suben un 50\%.
 ]
 
 == Largo Plazo
@@ -229,16 +211,15 @@ En el largo plazo, todos los factores son variables. El análisis se realiza en 
   Es el análogo de la curva de indiferencia, pero para la producción.
 ]
 
-*Propiedades de las isocuantas:*
-
-1. *Pendiente negativa:* para mantener $q$ constante al aumentar $L$, hay que reducir $K$.
-2. *Convexas al origen:* la sustitución entre factores es posible pero tiene límite; la TMST es decreciente.
-3. *Más lejos del origen → mayor producción:* isocuantas superiores representan niveles de producto más altos.
-4. *No se cruzan* (igual que las curvas de indiferencia).
 
 El conjunto de todas las isocuantas forma el *mapa de isocuantas*, que describe completamente $F(K,L)$.
 
-#imagen("Mapa de isocuantas: tres curvas convexas decrecientes q=20, q=40, q=60 en plano (L, K)")
+#figure(
+    image("images/isocuanta.png", width: 100%),
+    caption: [Mapa de isocuantas: tres curvas convexas decrecientes q=20, q=40, q=60 en plano (L, K)]
+  )
+
+//#imagen("Mapa de isocuantas: tres curvas convexas decrecientes q=20, q=40, q=60 en plano (L, K)")
 
 === Tasa Marginal de Sustitución Técnica (TMST)
 
@@ -258,13 +239,14 @@ $ => T M S T = (P M g_L) / (P M g_K) $
 
 *La TMST decrece a medida que nos movemos hacia la derecha* sobre la isocuanta: al usar más $L$ y menos $K$, el $P M g_L$ cae (rendimientos marginales decrecientes del trabajo) y el $P M g_K$ sube (capital más escaso), entonces el cociente $P M g_L \/ P M g_K$ disminuye. Esto explica la *convexidad* de la isocuanta.
 
-#imagen("Isocuanta convexa con puntos A, B, C: pendiente se aplana de A hacia C mostrando TMST decreciente")
+//#imagen("Isocuanta convexa con puntos A, B, C: pendiente se aplana de A hacia C mostrando TMST decreciente")
+
 
 #cuadro-ejemplo(titulo: [Ejercicio — TMST en la panadería])[
   $q = 10 K^(0,5) L^(0,5)$. Para la isocuanta $q = 40$: $K = (16) / L$.
 
   $ T M S T = (P M g_L) / (P M g_K) = (5 K^(0,5) L^(-0,5)) / (5 K^(-0,5) L^(0,5)) = (K) / (L) $
-
+  #align(center)[
   #table(
     columns: (auto, auto, auto, auto),
     align: (center, center, center, center),
@@ -274,10 +256,11 @@ $ => T M S T = (P M g_L) / (P M g_K) $
     [B], [(4; 4)],  [1],   [1 trabajador más libera 1 unidad de K],
     [C], [(16; 1)], [1/16],[1 trabajador más libera solo 1/16 de K],
   )
+  ]
 
-  La TMST disminuye: al ir hacia la derecha, el trabajo es relativamente abundante y el capital escaso, por lo que cada trabajador adicional "vale" menos capital.
+  La TMST disminuye: al ir hacia la derecha, el trabajo es relativamente abundante y el capital escaso, por lo que cada trabajador adicional 'vale' menos capital.
+
 ]
-
 === Casos Extremos de Sustituibilidad
 
 #table(
@@ -292,7 +275,11 @@ $ => T M S T = (P M g_L) / (P M g_K) $
   [$q = min(2L, K)$. \ Isocuantas *en L (Leontief)*. No hay sustitución: los factores son complementos perfectos. Para producir más hay que aumentar ambos en proporción fija.],
 )
 
-#imagen("Tres paneles: isocuantas rectas (sustitutos), convexas (Cobb-Douglas) e isocuantas en L (Leontief)")
+//#imagen("Tres paneles: isocuantas rectas (sustitutos), convexas (Cobb-Douglas) e isocuantas en L (Leontief)")
+
+#figure(
+    image("images/3paneles.png", width: 100%)
+)
 
 #cuadro-registro(titulo: [Leontief — Interpretación])[
   Con $q = min(6K, 5L)$, la isocuanta $q = 30$ tiene su vértice en $(L = 6, K = 5)$.
@@ -326,6 +313,7 @@ $ A (lambda K)^alpha (lambda L)^beta = lambda^(alpha + beta) A K^alpha L^beta $
 
 El exponente $alpha + beta$ determina los rendimientos:
 
+#align(center)[
 #table(
   columns: (auto, auto, auto),
   align: (center, center, center),
@@ -335,7 +323,7 @@ El exponente $alpha + beta$ determina los rendimientos:
   [$q = 10 K^(0,5) L^(0,5)$], [1,0], [Constantes],
   [$q = 3 K^(0,3) L^(0,4)$], [0,7], [Decrecientes],
 )
-
+]
 *¿Por qué pueden existir cada tipo?*
 - *Crecientes:* especialización y ventajas de la producción en escala (economías de escala).
 - *Constantes:* duplicar la planta duplica los recursos y el producto.
@@ -357,7 +345,8 @@ El exponente $alpha + beta$ determina los rendimientos:
 
 #cuadro-ejemplo(titulo: [Ejemplo — La panadería, escala])[
   $q = 10 K^(0,5) L^(0,5)$. Rendimientos *constantes* ($alpha + beta = 1$).
-
+  
+  #align(center)[
   #table(
     columns: (auto, auto, auto, auto, auto),
     align: (left, center, center, center, center),
@@ -368,10 +357,11 @@ El exponente $alpha + beta$ determina los rendimientos:
     [Duplicar solo el capital], [8],  [9],  [84,85], [+41\%],
     [Duplicar la escala (ambos)],[8], [18], [120],   [+100\%],
   )
-
+  ]
   Duplicar un solo factor da +41\% (rendimientos marginales decrecientes). Duplicar ambos da exactamente +100\% (rendimientos constantes a escala). *Son compatibles*: responden preguntas distintas.
 ]
 
+/*
 === Isocostos y Minimización de Costos
 
 En el largo plazo, la empresa elige la combinación $(L, K)$ que *minimiza el costo* de producir una cantidad dada $q_0$.
@@ -449,3 +439,4 @@ Al variar el nivel de producción objetivo $q_0$ (manteniendo los precios $w$ y 
 #cuadro-atencion(titulo: [Próxima clase — Costos])[
   Hasta aquí los factores no tenían precio en el análisis de producción. La *Clase 4* introduce los costos: ¿cuál es la combinación más barata para producir cada cantidad? ¿Cómo se forman las curvas de costo de corto y largo plazo?
 ]
+*/
