@@ -126,7 +126,7 @@ Resumen De Micro-Economia
 #include "files/micro/Clase4.typ"
 
 #pagebreak()
-#include "files/micro/Clase5.typ"
+//#include "files/micro/Clase5.typ"
 
 
 
