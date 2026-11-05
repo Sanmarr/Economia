@@ -34,7 +34,7 @@ margin: (
 
 //Seteo el formato del texto
 #set text(
-  font: "Linux Biolinum O",
+  font: "EB Garamond 08", // Purisa, Linux Biolinum O, EB Garamond 08
   size: 14pt,
   tracking: 0pt, // (Default = 0pt2)
   spacing: 100%,

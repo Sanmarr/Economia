@@ -185,21 +185,21 @@ Esta relación matemática fundamental nos entrega tres reglas directas de decis
 
 - *Si la demanda es inelástica ($|E_p| < 1$)*:
   $1 - |E_p| > 0 => (d(I T)) / (d P) > 0$.
-  El efecto precio supera al efecto cantidad. Subir el precio incrementa el ingreso total; bajar el precio reduce el ingreso total.
+  El efecto precio supera al efecto cantidad. #hl[Subir el precio incrementa el ingreso total; bajar el precio reduce el ingreso total.]
 
 - *Si la demanda es elástica ($|E_p| > 1$)*:
   $1 - |E_p| < 0 => (d(I T)) / (d P) < 0$.
-  El efecto cantidad domina sobre el efecto precio. Subir el precio destruye tantas ventas que el ingreso total se derrumba; una rebaja de precios expande el ingreso total.
+  El efecto cantidad domina sobre el efecto precio. #hl[Subir el precio destruye tantas ventas que el ingreso total se derrumba; una rebaja de precios expande el ingreso total.]
 
 - *Si la demanda tiene elasticidad unitaria ($|E_p| = 1$)*:
   $1 - |E_p| = 0 => (d(I T)) / (d P) = 0$.
   El ingreso total alcanza su punto crítico estacionario (máximo global de la función cuadrática de ingreso).
 
-#v(0.5em)
-#imagen("Relación gráfica superior e inferior: curva de demanda lineal con sus tres tramos (elástico, unitario e inelástico) y curva cuadrática de Ingreso Total alcanzando su máximo donde |Ep| = 1")
 
----
+//#imagen("Relación gráfica superior e inferior: curva de demanda lineal con sus tres tramos (elástico, unitario e inelástico) y curva cuadrática de Ingreso Total alcanzando su máximo donde |Ep| = 1")
 
+
+/*
 === Ejercicio de Aplicación de Clase: ¿Conviene Subir o Bajar el Precio?
 
 #cuadro-ejemplo(titulo: [Resolución Paso a Paso: Análisis de Precios e Ingresos])[
@@ -244,23 +244,8 @@ Esta relación matemática fundamental nos entrega tres reglas directas de decis
   [$8$], [$20$], [$-2.00$], [\$160], [No, el ingreso baja (tramo elástico)]
 )
 
----
+*/
 
-== 4. Determinantes Estructurales de la Elasticidad Precio y Horizonte Temporal
-
-¿Qué hace que la demanda de un bien sea extremadamente sensible o prácticamente rígida? La teoría económica identifica cuatro determinantes principales:
-
-1. *Disponibilidad y cercanía de sustitutos*:
-   Es el factor más determinante. Los bienes con sustitutos cercanos y fácilmente accesibles (marcas de manteca, líneas aéreas alternativas, naftas de distintas petroleras) tienen demandas muy elásticas. Si el precio sube, los compradores migran rápidamente a la competencia. En cambio, bienes sin sustitutos viables (agua corriente, electricidad, medicamentos patentados) presentan demandas inelásticas.
-
-2. *Proporción del ingreso gastada en el bien*:
-   Cuanto mayor sea la porción del presupuesto del consumidor destinada a comprar el producto, mayor será la elasticidad. Un aumento del 20% en el precio de la sal o de los fósforos casi no altera la conducta del comprador porque representa centavos de su ingreso. En cambio, un aumento del 20% en el alquiler o en la cuota del automóvil obliga a reestructurar radicalmente los patrones de gasto.
-
-3. *Bienes de primera necesidad vs. Bienes de lujo*:
-   Los bienes imprescindibles para la vida o la actividad productiva diaria (pan, leche, insulina, transporte público básico) tienen demandas inelásticas. Los bienes suntuarios o prescindibles (relojes de alta gama, cruceros turísticos, cenas en locales gourmet) tienen demandas altamente elásticas.
-
-4. *Amplitud de la definición del mercado*:
-   Cuanto más estrechamente se defina un mercado, mayor será la elasticidad porque aparecen sustitutos directos. La demanda agregada de "alimentos" es sumamente inelástica (no podemos dejar de comer); la demanda de "postres" es más elástica; y la demanda de "helado artesanal de pistacho marca X" es extremadamente elástica.
 
 === Elasticidad en el Corto Plazo vs. Largo Plazo
 
@@ -269,8 +254,14 @@ Esta relación matemática fundamental nos entrega tres reglas directas de decis
 ]
 
 *Mecanismo de ajuste*:
-- *A corto plazo*: Los agentes económicos están atados a su infraestructura física instalada, contratos vigentes, hábitos arraigados y stocks de bienes durables. Si el precio de los combustibles fósiles o del gas natural se triplica de un mes al otro, el consumidor no puede deshacerse instantáneamente de su automóvil térmico ni cambiar la caldera de su vivienda; se ve obligado a pagar el mayor precio, reduciendo el consumo sólo marginalmente.
-- *A largo plazo*: Los individuos disponen de tiempo para reorganizar sus decisiones de vida y tecnología: compran vehículos híbridos o eléctricos, instalan paneles solares, mudan su residencia más cerca del trabajo o renegocian contratos de provisión.
+- *A corto plazo*: #hl[La demanda es más inelástica]. El consumidor tiene margen limitado para ajustar: el stock de bienes durables, los hábitos y la tecnología disponible están dados.
+
+- *A largo plazo*:#hl[La demanda es más elástica] Aparecen más opciones: cambiar de proveedor, de tecnología o de hábito de consumo. 
+
+#figure(
+  image("images/corto.png", width: 30%),
+  caption: [Comparación de curvas de demanda: demanda empinada de corto plazo (inelástica) vs. demanda aplanada de largo plazo (elástica) rotando sobre el punto inicial]
+) <fig:corto>
 
 #cuadro-atencion(titulo: [Implicancia Fundamental de Coyuntura])[
   Un error recurrente al interpretar datos económicos consiste en extrapolar la elasticidad observada en los meses inmediatamente posteriores a una suba tarifaria al horizonte de largo plazo.
@@ -278,16 +269,13 @@ Esta relación matemática fundamental nos entrega tres reglas directas de decis
   Si un gobierno o una empresa asume que la demanda es inelástica basándose en mediciones de corto plazo y proyecta ingresos estables a futuro, sufrirá una grave decepción: en el largo plazo la curva se aplana ($D'$ más elástica), los consumidores encuentran alternativas y la cantidad demandada cae de manera mucho más pronunciada.
 ]
 
-#v(0.5em)
-#imagen("Comparación de curvas de demanda: demanda empinada de corto plazo (inelástica) vs. demanda aplanada de largo plazo (elástica) rotando sobre el punto inicial")
 
----
+/*
+== Otras Elasticidades Clave: Ingreso y Cruzada
 
-== 5. Otras Elasticidades Clave: Ingreso y Cruzada
+=== Elasticidad Ingreso de la Demanda ($E_I$)
 
-=== Elasticidad Ingreso de la Demanda ($E_I$ o $E_R$)
-
-Mide la variación porcentual en la cantidad demandada de un bien provocada por una variación porcentual en el ingreso disponible ($I$ o $R$) de los consumidores:
+Mide la variación porcentual en la cantidad demandada de un bien provocada por una variación porcentual en el ingreso disponible ($I$) de los consumidores:
 
 $ E_I = ("%" Delta Q_d) / ("%" Delta I) = (d Q_d) / (d I) dot I / Q_d $
 
@@ -303,7 +291,7 @@ El signo y el valor absoluto de la elasticidad ingreso permiten clasificar los b
    - *Bienes de Lujo o Superiores ($E_I > 1$)*: La cantidad demandada crece más que proporcionalmente ante mejoras en el ingreso. Al incrementarse el nivel socioeconómico, el gasto en estos rubros absorbe una cuota creciente de la renta disponible.
      _Ejemplos_: Alta tecnología, hotelería premium, automóviles de alta gama, servicios de ocio selecto.
 
----
+*/
 
 === Elasticidad Precio Cruzada de la Demanda ($E_(x y)$)
 
@@ -335,10 +323,16 @@ El *signo algebraico* de la elasticidad cruzada es el criterio definitivo para d
   [Cuadernos universitarios y neumáticos para camiones.]
 )
 
----
 
-== 6. Intervención del Estado en los Mercados: Fundamentos y Bienestar
+#pagebreak()
+== Intervención del Estado en los Mercados: Fundamentos y Bienestar
 
+#figure(
+  image("images/estado-motivos.png", width: 100%),
+  caption: [Motivaciones y Mecanismos de la Intervención Pública]
+) <fig:estado-motivos>
+
+/*
 #cuadro-concepto(titulo: [Motivaciones y Mecanismos de la Intervención Pública])[
   El Estado interviene en la economía de mercado por tres razones primarias:
   1. *Fallas de mercado*: cuando existen externalidades, bienes públicos o asimetrías de información que alejan al equilibrio competitivo de la eficiencia social.
@@ -349,7 +343,9 @@ El *signo algebraico* de la elasticidad cruzada es el criterio definitivo para d
   - *Intervenciones Directas*: Fijación administrativa de precios (precios máximos o mínimos) o cantidades (cuotas de importación o producción).
   - *Intervenciones Indirectas*: Creación de impuestos o subsidios que alteran los incentivos de precios de demandantes y oferentes sin prohibir transacciones.
 ]
+*/
 
+/*
 === Marco de Evaluación: Los Excedentes Económicos
 
 Para evaluar objetivamente si una política económica beneficia o perjudica a la sociedad, la microeconomía utiliza el concepto de *Bienestar Social Total ($W$)*, definido como la suma del Excedente del Consumidor ($E C$), el Excedente del Productor ($E P$) y la Recaudación Neta del Sector Público ($T$ o $- "Gasto Fiscal"$):
@@ -358,18 +354,25 @@ $ W = E C + E P + "Ingresos Fiscales" - "Costos Fiscales" $
 
 En un mercado libre y competitivo sin externalidades, el equilibrio $(P^*, Q^*)$ maximiza $W$. Cualquier intervención gubernamental que distorsione el precio o la cantidad genera transferencias de bienestar entre sectores y, casi invariablemente, una *Pérdida Irrecuperable de Eficiencia* (PIE o _Deadweight Loss_), que representa valor económico destruido que nadie captura.
 
----
+*/
 
-== 7. Controles Directos de Precios: Precios Máximos y Mínimos
+== Controles Directos de Precios: Precios Máximos y Mínimos
 
-=== A. Precio Máximo (Price Ceiling)
+=== A. Precio Máximo (Price Ceiling) --> Pierden Productores
 
 Un *precio máximo* legal prohíbe a los oferentes cobrar un precio superior al nivel establecido administrativamente por la autoridad regulatoria ($P_max$).
 
+/*
 #cuadro-atencion(titulo: [Condición de Efectividad (Vinculante)])[
   - Si el gobierno fija $P_max >= P^*$, la restricción es *no vinculante* o inoperante: el mercado seguirá operando libremente en su equilibrio competitivo $P^*$.
   - Si el gobierno fija $P_max < P^*$, el precio legal es *vinculante*: el precio se ve forzado a descender, generando distorsiones estructurales profundas.
 ]
+*/
+
+#figure(
+  image("images/pmax.png", width: 100%),
+  caption: [Precio Máximo vinculante: fijación por debajo del equilibrio, exceso de demanda (escasez), contracción de la producción a Qs y áreas de excedente y PIE]
+)
 
 *Efectos económicos de un Precio Máximo vinculante*:
 1. *Desequilibrio de mercado (Escasez crónica)*:
@@ -382,8 +385,8 @@ Un *precio máximo* legal prohíbe a los oferentes cobrar un precio superior al 
 3. *Racionamiento no por precio y externalidades negativas*:
    Al desaparecer el precio como mecanismo de asignación, surgen mecanismos alternativos ineficientes: colas y esperas interminables (desperdicio masivo de horas de trabajo), amiguismo, corrupción administrativa, degradación de la calidad del producto y el inevitable surgimiento del *mercado negro* (donde el bien escaso se revende ilegalmente a precios mucho mayores que el equilibrio original).
 
-#v(0.5em)
-#imagen("Precio Máximo vinculante: fijación por debajo del equilibrio, exceso de demanda (escasez), contracción de la producción a Qs y áreas de excedente y PIE")
+
+//#imagen("Precio Máximo vinculante: fijación por debajo del equilibrio, exceso de demanda (escasez), contracción de la producción a Qs y áreas de excedente y PIE")
 
 *Análisis analítico del bienestar social en un Precio Máximo*:
 - *Excedente del Productor*: Los vendedores sufren una doble pérdida. Pierden el rectángulo $A$ (transferido a los consumidores que logran comprar más barato) y pierden el triángulo $C$ (ganancias de intercambio sobre las unidades que ya no producen).
@@ -397,39 +400,57 @@ Un *precio máximo* legal prohíbe a los oferentes cobrar un precio superior al 
   Sumando las variaciones sociales:
   $ Delta W = Delta E C + Delta E P = (A - B) - (A + C) = - (B + C) $
   $ "PIE" = B + C > 0 $
-  El triángulo $B + C$ representa transacciones mutuamente beneficiosas que fueron eliminadas por la intervención estatal.
+  El triángulo $B + C$ #hl[representa transacciones mutuamente beneficiosas que fueron eliminadas por la intervención estatal].
 
----
 
-=== B. Precio Mínimo (Price Floor)
+#pagebreak()
+=== B. Precio Mínimo (Price Floor) --> Pierden Consumidores
 
 Un *precio mínimo* legal establece una tarifa obligatoria por debajo de la cual está terminantemente prohibido comprar o vender un bien o factor productivo ($P_min$).
 
-- Para ser vinculante, el precio mínimo debe situarse *por encima del equilibrio* ($P_min > P^*$).
+#figure(
+  image("images/pmin.png", width: 100%),
+  caption: [Precio Mínimo vinculante: fijación por encima del equilibrio, exceso de oferta, caída de la cantidad consumida a Qd y pérdida de eficiencia B + C]
+)
+
+
 - *Efectos económicos*:
-  1. *Excedente de producción*: A un precio elevado, las empresas desean colocar una gran cantidad $Q_s$, pero los consumidores restringen sus compras a $Q_d$. Se genera un exceso de oferta persistente: $"Excedente" = Q_s - Q_d > 0$.
-  2. *Cantidad efectivamente transada*: La demanda restringe el volumen transado:
+  - *Excedente de producción*: A un precio elevado, las empresas desean colocar una gran cantidad $Q_s$, pero los consumidores restringen sus compras a $Q_d$. Se genera un exceso de oferta persistente: 
+    
+  $ "Excedente" = Q_s - Q_d > 0 $
+  
+  - *Cantidad efectivamente transada*: La demanda restringe el volumen transado:
+
      $ Q_("transada") = min(Q_s, Q_d) = Q_d $
-  3. *El caso del Salario Mínimo*: En el mercado laboral, los trabajadores son la oferta y las empresas la demanda. Un salario mínimo fijado por encima del equilibrio competitivo provoca que más personas deseen trabajar ($L_s$ sube), pero las empresas contratan menos personal ($L_d$ baja). La diferencia representa *desempleo involuntario* concentrado en los trabajadores más vulnerables y menos calificados.
-  4. *Pérdida Irrecuperable de Eficiencia*:
-     - Los consumidores pierden el rectángulo transferido $A$ y el triángulo de bienestar $B$: $Delta E C = - (A + B) < 0$.
-     - Los productores cobran más por lo que venden (ganan $A$), pero pierden las ventas caídas ($C$): $Delta E P = A - C$.
-     - La sociedad en su conjunto sufre una pérdida irrecuperable neta $"PIE" = B + C$.
+  
+  - *El caso del Salario Mínimo*: #hl[En el mercado laboral, los trabajadores son la oferta y las empresas la demanda]. Un salario mínimo fijado por encima del equilibrio competitivo provoca que más personas deseen trabajar ($L_s$ sube), pero las empresas contratan menos personal ($L_d$ baja). La diferencia representa *desempleo involuntario* concentrado en los trabajadores más vulnerables y menos calificados.
+  
+  - *Pérdida Irrecuperable de Eficiencia*:
+     - Los consumidores pierden el rectángulo transferido $A$ y el triángulo de bienestar $B$: 
+     $ Delta E C = - (A + B) < 0 $
+     - Los productores cobran más por lo que venden (ganan $A$), pero pierden las ventas caídas ($C$): 
+     $ Delta E P = A - C $
+     - La sociedad en su conjunto sufre una pérdida irrecuperable neta 
+     $ "PIE" = B + C $.
 
-#v(0.5em)
-#imagen("Precio Mínimo vinculante: fijación por encima del equilibrio, exceso de oferta, caída de la cantidad consumida a Qd y pérdida de eficiencia B + C")
 
----
+//#imagen("Precio Mínimo vinculante: fijación por encima del equilibrio, exceso de oferta, caída de la cantidad consumida a Qd y pérdida de eficiencia B + C")
 
-== 8. Impuestos Indirectos, Cuña Fiscal e Incidencia Tributaria
+
+
+== Impuestos Indirectos, Cuña Fiscal e Incidencia Tributaria
 
 Los gobiernos gravan bienes y servicios para obtener recursos fiscales. Analizaremos el impacto de un *impuesto específico unitario* ($t$ pesos por cada unidad comercializada).
 
 === La Cuña Fiscal y el Principio de Neutralidad Legal
 
-Un impuesto unitario de cuantía $t$ introduce una brecha o *cuña fiscal* entre el precio que paga el consumidor ($P_c$) y el precio neto que efectivamente embolsa el productor ($P_p$):
+Un impuesto unitario de cuantía $t$ introduce una brecha o *cuña fiscal* entre:
+ - El precio que paga el consumidor ($P_c$) y 
+ - El precio neto que efectivamente embolsa el productor ($P_p$):
 
-$ P_c - P_p = t $
+$ underbrace(Delta P = P_c - P_p = t,  "Se lo queda el Estado")  $
+
+Aunque el Estado le cobre formalmente el impuesto al vendedor, eso #hl[no significa que el vendedor soporte toda la carga económica. La respuesta *depende de las elasticidades de la oferta y la demanda*]
 
 #cuadro-concepto(titulo: [Principio de Neutralidad Legal del Impuesto])[
   En términos económicos, *da exactamente igual si la ley tributaria establece que el impuesto debe pagarlo formalmente el comprador o si debe remitirlo el vendedor*.
@@ -452,7 +473,7 @@ La suma de ambas cargas absorbe la totalidad del gravamen: $Delta P_c + Delta P_
   *La carga de un impuesto recae con mayor fuerza sobre el lado del mercado que sea más inelástico (aquel con menor capacidad de sustitución y escape).*
 
   Analíticamente, el reparto de la carga es inversamente proporcional a las elasticidades de las curvas:
-  $ (Delta P_c) / (Delta P_p) = E_s / |E_d| $
+  $ (Delta P_c) / (Delta P_p) = (E_s) / (|E_d|) $
 ]
 
 *Casos extremos y patrones de traslación*:
@@ -461,8 +482,13 @@ La suma de ambas cargas absorbe la totalidad del gravamen: $Delta P_c + Delta P_
 2. *Demanda elástica y Oferta inelástica*:
    Los consumidores tienen múltiples alternativas y huyen ante aumentos de precio. La empresa no puede trasladar el impuesto porque perdería a todos sus clientes; debe absorberlo rebajando su margen de ganancia. Los productores soportan la mayor parte de la carga.
 
-#v(0.5em)
-#imagen("Incidencia impositiva comparada: a la izquierda, demanda inelástica traslada casi todo el tributo al consumidor; a la derecha, oferta inelástica obliga al productor a absorber la carga")
+
+#figure(
+  image("images/ine.png", width: 100%),
+  caption: [El lado del mercado con menor elasticidad (más inelástico) soporta la mayor parte de la carga]
+)
+
+//#imagen("Incidencia impositiva comparada: a la izquierda, demanda inelástica traslada casi todo el tributo al consumidor; a la derecha, oferta inelástica obliga al productor a absorber la carga")
 
 === Recaudación Fiscal y Pérdida Irrecuperable de Eficiencia
 
@@ -482,12 +508,12 @@ Al contraerse la producción de $Q^*$ a $Q_t$, el mercado sufre una contracción
   Por este motivo, en finanzas públicas se recomienda estructurar sistemas tributarios de *base amplia y alícuotas moderadas*, en lugar de gravar pocos bienes con tasas asfixiantes.
 ]
 
-#v(0.5em)
-#imagen("Efecto de un impuesto unitario: cuña Pc - Pp = t, recaudación fiscal (rectángulo central) y pérdida irrecuperable de eficiencia (triángulo PIE)")
 
----
+//#imagen("Efecto de un impuesto unitario: cuña Pc - Pp = t, recaudación fiscal (rectángulo central) y pérdida irrecuperable de eficiencia (triángulo PIE)")
 
-== 9. Ejercicio Práctico Integrador de Clase (Resuelto Paso a Paso)
+
+/*
+== Ejercicio Práctico Integrador de Clase (Resuelto Paso a Paso)
 
 A continuación se desarrolla de forma exhaustiva el ejercicio evaluado durante la clase práctica, cubriendo el equilibrio inicial, la fijación de un precio máximo y la implementación de un impuesto por unidad.
 
@@ -656,7 +682,7 @@ En la última diapositiva de la clase se propone recalcular el impacto si el imp
 
 ---
 
-== 10. Elasticidad Aplicada a Decisiones de Negocio: Traslación de Costos (_Pass-Through_)
+== Elasticidad Aplicada a Decisiones de Negocio: Traslación de Costos (_Pass-Through_)
 
 Frente a un shock adverso de costos (aumento de salarios nominales, devaluación que encarece insumos importados, o alza de tarifas de energía), las empresas enfrentan el dilema estratégico de si pueden o no trasladar ese incremento al precio final de venta.
 
@@ -667,18 +693,43 @@ La microeconomía demuestra que la respuesta depende exclusivamente de la *elast
 - *Si la empresa enfrenta una demanda elástica*:
   El mercado está poblado de competidores y bienes sustitutos cercanos. Si la firma intenta transferir el costo aumentando los precios en la misma proporción, sus ventas se desplomarán catastróficamente. A la empresa le resulta económicamente más conveniente absorber el impacto reduciendo su margen de beneficio (_markup_) antes que perder cuota de mercado.
 
----
+*/
 
-== 11. Caso de Discusión Macroeconómica: La Curva de Laffer
+==  La Curva de Laffer
 
-#cuadro-concepto(titulo: [Mecanismo Teórico de la Curva de Laffer])[
-  La *Curva de Laffer* postula una relación no lineal entre la alícuota tributaria ($tau$, expresada en porcentaje de 0% a 100%) y la recaudación impositiva total del Estado ($T$).
+#figure(
+  image("images/laffer.png", width: 50%),
+  caption: [Curva de Laffer]
+)
 
-  $ T(tau) = tau dot B(tau) $
+A alícuotas muy bajas, subir la tasa 
+aumenta la recaudación. Pero a alícuotas muy altas, 
+sigue subiendo la tasa pero cae la base imponible 
+(menos actividad declarada, menos oferta de trabajo o 
+inversión), y la recaudación puede caer.ue se aplica el gravamen).
 
-  Donde $B(tau)$ representa la *base imponible* (el total de ingresos declarados, masa salarial, ventas o capital sobre el que se aplica el gravamen).
-]
+Existe algún punto donde la recaudación deja de crecer con la tasa.
 
+#table(
+  columns: (2fr, 1.8fr, 2.5fr),
+  fill: (x, y) => if y == 0 { rgb("#e8f4f8") } else { none },
+  stroke: 0.5pt + rgb("#cccccc"),
+  align: (left, center, left),
+  table.header([*Investigación Académica*], [*Estimación del Máximo ($tau^*$)*], [*Metodología y Supuesto de Elasticidad*]),
+  [Hsing (1996)],
+  [Entre 32.7% y 35.2%],
+  [Impuesto a la renta personal en EE.UU. (período 1959-1991).],
+
+  [Trabandt y Uhlig (2011)],
+  [Margen de suba disponible],
+  [Impuesto al trabajo en EE.UU. Demostraron que la tasa vigente podía incrementarse y la recaudación crecer hasta un 30% adicional antes del pico.],
+
+  [Diamond y Saez (2011)],
+  [$approx 73%$],
+  [Tasa marginal máxima sobre los tramos más ricos en EE.UU., bajo un supuesto conservador de elasticidad de oferta laboral de $epsilon = 0.25$.]
+)
+
+/*
 === El Mecanismo Económico Subyacente
 
 Al derivar la recaudación impositiva respecto de la alícuota $tau$:
@@ -749,7 +800,7 @@ En el debate público suele confundirse el principio conceptual con la evidencia
 
 ---
 
-== 12. Síntesis Conceptual y Glosario Rápido
+== Síntesis Conceptual y Glosario Rápido
 
 #table(
   columns: (1.5fr, 1.2fr, 1.2fr, 2.5fr),
@@ -771,3 +822,5 @@ En el debate público suele confundirse el principio conceptual con la evidencia
 - *Pérdida Irrecuperable de Eficiencia (PIE)*: Pérdida neta de excedente social ocasionada por distorsiones de precios que impiden intercambios mutuamente ventajosos.
 - *Pass-Through*: Grado o porcentaje en el que una variación en los costos de producción es trasladada al precio final cobrado a los consumidores.
 - *Curva de Laffer*: Representación gráfica de la relación entre la tasa impositiva y los fondos recaudados, reflejando el compromiso entre alícuota y base gravada.
+
+*/
