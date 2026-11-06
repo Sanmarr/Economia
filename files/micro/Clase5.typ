@@ -61,19 +61,9 @@ En la clase anterior estudiamos los costos de producción. Ahora usamos esas cur
 
 === Supuestos de la Competencia Perfecta
 
-#cuadro-concepto(titulo: [¿Qué caracteriza a un mercado perfectamente competitivo?])[
-  #table(
-    columns: (1fr, 1fr),
-    align: (left, left),
-    stroke: 0.5pt,
-    table.header([*Supuesto*], [*Implicancia*]),
-    [Muchos compradores y vendedores], [Ningún participante individual tiene tamaño suficiente para influir sobre el precio de mercado.],
-    [Producto homogéneo], [Los compradores consideran idénticos los bienes ofrecidos por las distintas empresas.],
-    [Empresas precio-aceptantes], [Cada empresa toma el precio de mercado como dado y decide cuánto producir.],
-    [Información perfecta], [Compradores y vendedores conocen los precios y las condiciones del mercado.],
-    [Libre entrada y salida], [No hay barreras relevantes para ingresar o retirarse de la industria en el largo plazo.],
-  )
-]
+#figure(
+  image("images/compPerf.png", width: 100%)
+) 
 
 === Demanda de la Empresa e Ingreso Marginal
 
@@ -89,13 +79,18 @@ $ P = I M e = I M g $
 
 El ingreso total es $I T = P q$. Como $P$ es constante, cada unidad adicional aumenta el ingreso en $P$.
 
-#imagen("Comparar el mercado, donde oferta y demanda determinan P0, con la empresa individual, que enfrenta una demanda horizontal d = IMg = P0.")
+#figure(
+  image("images/MerVsEmp.png", width: 80%),
+  caption:[Comparar el mercado, donde oferta y demanda determinan P0, con la empresa individual, que enfrenta una demanda horizontal d = IMg = P0.]
+) 
+
+//#imagen("Comparar el mercado, donde oferta y demanda determinan P0, con la empresa individual, que enfrenta una demanda horizontal d = IMg = P0.")
 
 == Maximización del Beneficio
 
 El beneficio económico es la diferencia entre el ingreso total y el costo total:
 
-$ pi(q) = I T(q) - C T(q) = P q - C T(q) $
+$ pi(q) = I T(q) - C T(q) = P dot q - C T(q) $
 
 La empresa elige $q$ para maximizarlo. La condición de primer orden es:
 
@@ -109,7 +104,11 @@ $ P = C M g $
   La empresa produce en el punto donde el $C M g$ es *creciente*. Si el $C M g$ fuera decreciente, la igualdad $P = C M g$ no identificaría el máximo de beneficio. Además, hay que comprobar si el precio alcanza para cubrir los costos variables.
 ]
 
-#imagen("Curvas de CMg y CTMe junto con el precio horizontal P = IMg. El óptimo q* está en la intersección sobre el tramo creciente del CMg.")
+#figure(
+  image("images/PCMg.png", width: 42%)
+) 
+
+//#imagen("Curvas de CMg y CTMe junto con el precio horizontal P = IMg. El óptimo q* está en la intersección sobre el tramo creciente del CMg.")
 
 === Beneficio o Pérdida en el Corto Plazo
 
@@ -127,6 +126,10 @@ Una vez elegido el nivel de producción, se compara el precio con el costo total
 
 $ pi = (P - C T M e) q $
 
+#figure(
+  image("images/benOPer.png", width: 90%)
+) 
+
 Tener pérdidas no implica necesariamente que convenga cerrar: la decisión de corto plazo depende de si producir cubre los costos variables.
 
 === Producir o Cerrar Temporalmente
@@ -141,22 +144,22 @@ Conviene producir cuando los ingresos cubren al menos los costos variables:
 
 $ I T >= C V quad <=> quad P >= C V M e $
 
-#cuadro-concepto(titulo: [Regla de cierre de corto plazo])[
-  - Si $P > C V M e$, producir permite cubrir todos los costos variables y una parte de los fijos. La pérdida (si la hay) es menor que cerrando.
-  - Si $P = C V M e$, la empresa es indiferente entre producir y cerrar: en ambos casos pierde exactamente $C F$.
-  - Si $P < C V M e$, los ingresos ni siquiera cubren los costos variables. Conviene cerrar y limitar la pérdida a los costos fijos.
 
-  El *precio de cierre* es el mínimo del $C V M e$.
-]
+*Regla de cierre de corto plazo*
+
+#figure(
+  image("images/CortoPlazoCierre.png", width: 100%)
+) 
+
 
 #cuadro-atencion(titulo: [Cierre temporal y salida no son lo mismo])[
   Cerrar temporalmente es una decisión de *corto plazo*: la empresa deja de producir, pero mantiene sus costos fijos. Salir de la industria es una decisión de *largo plazo*: la empresa puede evitar todos sus costos y compara la rentabilidad económica con sus alternativas.
 ]
 
-#imagen("Curvas CMg, CTMe y CVMe. Mostrar el precio de cierre en el mínimo del CVMe y la regla de producir si P lo iguala o supera.")
+//#imagen("Curvas CMg, CTMe y CVMe. Mostrar el precio de cierre en el mínimo del CVMe y la regla de producir si P lo iguala o supera.")
 
-=== Ejercicio: Producir con Pérdidas o Cerrar
-
+#cuadro-ejemplo(titulo: [Producir o cerrar])[
+  
 Una empresa competitiva tiene:
 
 $ C T = q^3 - 8 q^2 + 30 q + 180 $
@@ -184,6 +187,8 @@ Y el mercado está dado por $Q_D = 150 - P$ y $Q_S = 66 + P$.
    $ pi = P q - C T(6) = 42 dot 6 - 288 = -36 $
 
    La empresa tiene una pérdida de $36$, pero es menor que los $180$ que perdería si cerrara.
+]
+
 
 == La Oferta Competitiva
 
@@ -195,13 +200,22 @@ Para cada precio, la empresa elige la cantidad donde $P = C M g$, siempre que el
   La oferta de una empresa competitiva es el tramo *creciente del $C M g$ que queda por encima del mínimo del $C V M e$*. Por debajo del precio de cierre, la empresa no produce.
 ]
 
-#imagen("Curva de oferta individual: tramo creciente del CMg a partir del mínimo del CVMe; por debajo del precio de cierre, q = 0.")
+#figure(
+  image("images/curvaOferta.png", width: 50%)
+) 
+
+//#imagen("Curva de oferta individual: tramo creciente del CMg a partir del mínimo del CVMe; por debajo del precio de cierre, q = 0.")
 
 === Oferta de la Industria
 
 La oferta de mercado se obtiene mediante la *suma horizontal* de las ofertas individuales: a cada precio se suman las cantidades que ofrece cada empresa.
 
-#imagen("Suma horizontal de las curvas de oferta de varias empresas para obtener la oferta de la industria.")
+#figure(
+  image("images/sumHorizontal.png", width: 70%)
+) 
+
+
+//#imagen("Suma horizontal de las curvas de oferta de varias empresas para obtener la oferta de la industria.")
 
 === Excedente del Productor y Beneficio
 
@@ -216,6 +230,7 @@ $ pi = E P - C F $
 #cuadro-ejemplo(titulo: [Nancy y la miel])[
   Nancy vende miel en un mercado competitivo a $P = 50$ por kilo. Sus costos fijos son $15$ y puede producir hasta 6 kg.
 
+  #align(center)[
   #table(
     columns: (auto, auto, auto, auto, auto),
     align: (center, center, center, center, center),
@@ -227,7 +242,7 @@ $ pi = E P - C F $
     [4], [189], [59], [200], [−4],
     [5], [257], [68], [250], [−22],
     [6], [337], [80], [300], [−52],
-  )
+  )]
 
   A $P = 50$, la tercera unidad todavía agrega más ingreso ($50$) que costo ($49$), pero la cuarta cuesta $59$. Produce *3 kg* y obtiene un beneficio de $150 - 130 - 15 = 5$.
 
@@ -238,9 +253,13 @@ $ pi = E P - C F $
 
 En el largo plazo las empresas pueden entrar o salir de la industria:
 
-- Si hay beneficios económicos positivos, nuevas empresas entran. La oferta de mercado aumenta y el precio tiende a bajar.
-- Si hay pérdidas económicas, algunas empresas salen. La oferta de mercado disminuye y el precio tiende a subir.
+- $P > C M g$: Si hay beneficios económicos positivos, nuevas empresas entran. La oferta de mercado aumenta y el precio tiende a bajar.
+- $P < C M g$: Si hay pérdidas económicas, algunas empresas salen. La oferta de mercado disminuye y el precio tiende a subir.
 - El ajuste se detiene cuando no hay incentivo para entrar ni para salir.
+
+#figure(
+  image("images/eqLargoPlazo.png", width: 90%)
+) 
 
 #cuadro-concepto(titulo: [Beneficio económico nulo])[
   En una industria competitiva con libre entrada y salida, el equilibrio de largo plazo satisface:
@@ -255,10 +274,11 @@ Para empresas idénticas, las condiciones de equilibrio también incluyen:
 - $Q = D(P)$: el mercado se vacía.
 - $N = Q / q^*$: la cantidad de empresas es la producción total dividida por la producción de cada empresa.
 
-#imagen("Equilibrio de largo plazo: empresa representativa con P en el mínimo del CMeLP y mercado con entrada/salida hasta beneficio económico cero.")
 
-=== Ejercicio: Equilibrio de Largo Plazo
 
+//#imagen("Equilibrio de largo plazo: empresa representativa con P en el mínimo del CMeLP y mercado con entrada/salida hasta beneficio económico cero.")
+
+#cuadro-ejemplo(titulo: [Equilibrio de Largo Plazo])[
 Empresas idénticas tienen $C T = 4q^2 + 25q + 100$, y la demanda es $Q_D = 5.300 - 20P$. Hay libre entrada y salida, y los precios de los factores son constantes.
 
 1. El costo medio de largo plazo es:
@@ -274,6 +294,8 @@ Empresas idénticas tienen $C T = 4q^2 + 25q + 100$, y la demanda es $Q_D = 5.30
 3. El número de empresas es $N = 4.000 / 5 = 800$. Cada una tiene beneficio económico cero.
 
 4. Si la demanda sube a $Q_D = 6.500 - 20P$, en el corto plazo (con las 800 empresas existentes) el precio sube a $75$ y cada empresa produce $6,25$. Aparecen beneficios positivos, que atraen nuevas empresas. En el largo plazo el precio vuelve a $65$, la producción de cada empresa vuelve a $5$ y el mercado alcanza $Q = 5.200$: quedan $1.040$ empresas, es decir, entran $240$.
+]
+
 
 === La Oferta de Largo Plazo de la Industria
 
@@ -289,7 +311,11 @@ La forma de la oferta de largo plazo depende de cómo cambian los costos de las 
   [Costo decreciente], [La expansión abarata factores o genera beneficios externos; bajan los costos de las empresas.], [Decreciente.],
 )
 
-#imagen("Tres casos de oferta de largo plazo: horizontal en industria de costo constante, creciente en industria de costo creciente y decreciente en industria de costo decreciente.")
+#figure(
+  image("images/oferta3.png", width: 100%)
+) 
+
+//#imagen("Tres casos de oferta de largo plazo: horizontal en industria de costo constante, creciente en industria de costo creciente y decreciente en industria de costo decreciente.")
 
 === Aumento Permanente de la Demanda
 
@@ -300,8 +326,19 @@ Ante un aumento permanente de la demanda, el ajuste ocurre en dos etapas:
 
 En una industria de *costo constante*, el precio de largo plazo no cambia; aumentan la cantidad total y el número de empresas. En las de costo creciente o decreciente, el precio de largo plazo también cambia, según varíen los costos de los factores.
 
-#imagen("Aumento permanente de demanda en el mercado y su efecto sobre el precio y la cantidad por empresa en el corto y el largo plazo.")
+//#imagen("Aumento permanente de demanda en el mercado y su efecto sobre el precio y la cantidad por empresa en el corto y el largo plazo.")
 
+
+#figure(
+  image("images/aumDemanda.png", width: 100%)
+) 
+
+#figure(
+  image("images/costoCreciente.png", width: 100%)
+) 
+
+
+/*
 == Aplicación: ¿Qué Sembrar?
 
 La decisión de siembra sirve para distinguir la rentabilidad económica de la decisión de continuar una actividad:
@@ -313,6 +350,9 @@ La decisión de siembra sirve para distinguir la rentabilidad económica de la d
 #cuadro-atencion(titulo: [Costos hundidos y decisión marginal])[
   Una inversión que ya no se puede recuperar no debe determinar la decisión de hoy. Antes de iniciar la producción se evalúa si conviene entrar; una vez incurrido un costo, se compara el beneficio futuro con los costos que todavía pueden evitarse.
 ]
+
+
+
 
 == Síntesis
 
@@ -335,3 +375,5 @@ La decisión de siembra sirve para distinguir la rentabilidad económica de la d
 ]
 
 La próxima clase estudia qué cambia cuando una empresa deja de ser precio-aceptante: en el monopolio, el ingreso marginal es menor que el precio.
+
+*/
