@@ -114,19 +114,19 @@ Resumen De Micro-Economia
 
 
 #pagebreak()
-//#include "files/micro/Clase1.typ"
+#include "files/micro/Clase1.typ"
 
 #pagebreak()
-//#include "files/micro/Clase2.typ"
+#include "files/micro/Clase2.typ"
 
 #pagebreak()
-//#include "files/micro/Clase3.typ"
+#include "files/micro/Clase3.typ"
 
 #pagebreak()
-//#include "files/micro/Clase4.typ"
+#include "files/micro/Clase4.typ"
 
 #pagebreak()
-//#include "files/micro/Clase5.typ"
+#include "files/micro/Clase5.typ"
 
 #pagebreak()
 #include "files/micro/Clase6.typ"

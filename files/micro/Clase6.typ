@@ -48,7 +48,8 @@
 
 = Monopolio
 
-En competencia perfecta, cada empresa toma el precio como dado. En cambio, un monopolista tiene *poder de mercado*: puede influir en el precio porque es el único vendedor de un bien sin sustitutos cercanos. Esto no significa que pueda cobrar cualquier precio: la cantidad que los compradores demandan limita sus decisiones.
+En competencia perfecta, cada empresa toma el precio como dado. En cambio, un 
+monopolista tiene *poder de mercado*: puede influir en el precio porque es el único vendedor de un bien sin sustitutos cercanos. #highlight[Esto no significa que pueda cobrar cualquier precio]: #highlight[la cantidad que los compradores demandan limita sus decisiones].
 
 == Origen y decisiones del monopolio
 
@@ -74,7 +75,12 @@ $ I M g = C M g $
 
 Si $I M g > C M g$, conviene aumentar la producción; si $I M g < C M g$, conviene reducirla. A diferencia de la empresa competitiva, el monopolista no iguala el precio al costo marginal.
 
-#imagen("Demanda decreciente (D = IMe) e ingreso marginal (IMg) por debajo de ella.")
+//#imagen("Demanda decreciente (D = IMe) e ingreso marginal (IMg) por debajo de ella.")
+
+#figure(
+  image("images/demDec.png", width: 40%),
+  caption: [Demanda decreciente (D = IMe) e ingreso marginal (IMg).]
+)
 
 #cuadro-atencion(titulo: [Cómo encontrar el óptimo])[
   Primero se obtiene $Q^*$ de $I M g = C M g$. Luego se reemplaza esa cantidad en la *demanda* para encontrar $P^*$. El precio no se lee en la curva de ingreso marginal.
@@ -90,14 +96,19 @@ Si $I M g > C M g$, conviene aumentar la producción; si $I M g < C M g$, convie
   En la demanda, $P^* = 24 - 10 = 14$. Si el costo medio es $4$, el beneficio es $(14 - 4) dot 10 = 100$.
 ]
 
-#imagen("Maximización del monopolio: intersección IMg = CMg para hallar Q*, precio P* leído en la demanda y área de beneficio.")
+//#imagen("Maximización del monopolio: intersección IMg = CMg para hallar Q*, precio P* leído en la demanda y área de beneficio.")
+
+#figure(
+  image("images/cantYprecio.png", width: 60%)
+)
 
 == Monopolio y eficiencia
 
 En competencia, la cantidad eficiente se determina donde la disposición marginal a pagar iguala el costo marginal: $P = C M g$. El monopolista restringe la producción para cobrar un precio mayor:
 
+#align(center)[
 #table(
-  columns: (1fr, 1fr, 1fr),
+  columns: (auto, auto, auto),
   align: (left, center, center),
   stroke: 0.5pt,
   table.header([*Resultado*], [*Competencia*], [*Monopolio*]),
@@ -106,21 +117,31 @@ En competencia, la cantidad eficiente se determina donde la disposición margina
   [Excedente del consumidor], [$200$], [$50$],
   [Beneficio], [$0$], [$100$],
   [Pérdida irrecuperable de eficiencia], [$0$], [$50$],
-)
+)]
 
 Parte del excedente del consumidor se transfiere al monopolista, pero la reducción de producción también elimina intercambios beneficiosos: esa pérdida para la sociedad es la *pérdida irrecuperable de eficiencia* (PIE). Además, puede haber *búsqueda de rentas*: recursos destinados a obtener o proteger el poder monopólico.
 
-#imagen("Comparación entre monopolio y competencia: excedente del consumidor, beneficio del monopolista y triángulo de pérdida irrecuperable de eficiencia.")
+#figure(
+  image("images/MonVsCom.png", width: 50%),
+  caption: [Comparación entre monopolio y competencia: excedente del consumidor, beneficio del monopolista y triángulo de pérdida irrecuperable de eficiencia.]
+)
+
+//#imagen("Comparación entre monopolio y competencia: excedente del consumidor, beneficio del monopolista y triángulo de pérdida irrecuperable de eficiencia.")
 
 #cuadro-concepto(titulo: [El monopolista no tiene curva de oferta])[
   No existe una correspondencia única entre precio y cantidad ofrecida por el monopolista. Con el mismo costo marginal y la misma cantidad óptima, distintas curvas de demanda pueden dar precios diferentes. La decisión depende tanto de los costos como de la forma de la demanda.
 ]
 
-#imagen("Dos curvas de demanda con el mismo CMg: igual cantidad monopolística, pero distinto precio; ilustración de que no existe curva de oferta.")
+//#imagen("Dos curvas de demanda con el mismo CMg: igual cantidad monopolística, pero distinto precio; ilustración de que no existe curva de oferta.")
 
-== Medición del poder de mercado
+#figure(
+  image("images/curvaOfertaMon.png", width: 50%),
+  caption: [Dos curvas de demanda con el mismo CMg: igual cantidad monopolística, pero distinto precio; ilustración de que no existe curva de oferta.]
+)
 
-El índice de Lerner mide el margen del precio sobre el costo marginal como proporción del precio:
+== Medición del poder de mercado: Indice de Lerner
+
+El #highlight[*índice de Lerner* mide el margen del precio sobre el costo marginal como proporción del precio]:
 
 $ L = (P - C M g) / P $
 
@@ -136,13 +157,22 @@ Aquí $E_d$ es la elasticidad-precio de la demanda que enfrenta la empresa. Cuan
 
 Las fuentes del poder de mercado incluyen la falta de sustitutos cercanos, un número reducido de competidores y la interacción entre empresas. La competencia agresiva suele reducir los márgenes; la coordinación puede ampliarlos.
 
+#figure(
+  image("images/ejED.png", width: 100%),
+  caption: [Ejemplo de indice Lerner ]
+)
+
 == Regulación y política antimonopolio
 
 === Topes de precio
 
-Un precio máximo puede reducir el precio y aumentar la cantidad respecto del monopolio no regulado. Al acercarlo al costo marginal, la cantidad puede llegar al nivel eficiente. Si el tope queda por debajo del costo marginal, producir deja de ser rentable y puede haber escasez o salida del mercado.
+#highlight[Un precio máximo puede reducir el precio y aumentar la cantidad respecto del monopolio no regulado]. Al acercarlo al costo marginal, la cantidad puede llegar al nivel eficiente. Si el tope queda por debajo del costo marginal, producir deja de ser rentable y puede haber escasez o salida del mercado.
 
-#imagen("Efecto de distintos topes de precio sobre la cantidad, el precio y la producción del monopolista.")
+//#imagen("Efecto de distintos topes de precio sobre la cantidad, el precio y la producción del monopolista.")
+
+#figure(
+  image("images/regMon.png", width: 100%),
+)
 
 === Monopolio natural
 
@@ -151,29 +181,41 @@ En un monopolio natural, las economías de escala mantienen decreciente el costo
 - Con $P = C M g$ se alcanza una asignación eficiente, pero si $C M g < C M e$, la empresa no cubre sus costos y puede requerir un subsidio.
 - Con $P = C M e$ la empresa cubre sus costos económicos, aunque la cantidad queda por debajo del nivel eficiente.
 
-#imagen("Monopolio natural: demanda, costo medio decreciente y costo marginal; comparación de regulación P = CMg y P = CMe.")
+//#imagen("Monopolio natural: demanda, costo medio decreciente y costo marginal; comparación de regulación P = CMg y P = CMe.")
+
+#figure(
+  image("images/monNat.png", width: 100%),
+)
+
 
 === Impuesto específico
 
-Un impuesto por unidad de monto $t$ eleva el costo marginal relevante de $C M g$ a $C M g + t$. El monopolista reduce la cantidad y sube el precio; el aumento del precio puede ser menor que el impuesto, por lo que la empresa absorbe parte de la carga en menores beneficios.
+Un impuesto por unidad de monto $t$ eleva el costo marginal relevante de $C M g$ a $C M g + t$. El monopolista reduce la cantidad y sube el precio; #highlight[el aumento del precio puede ser menor que el impuesto, por lo que la empresa absorbe parte de la carga en menores beneficios].
+
+#figure(
+  image("images/impMon.png", width: 100%),
+)
 
 === Legislación antimonopolio
 
-Las leyes antimonopolio buscan proteger la competencia y limitar conductas que restringen el mercado o consolidan un poder excesivo. El análisis considera tanto la estructura del mercado y las barreras de entrada como las conductas de las empresas.
+Las leyes antimonopolio buscan proteger la competencia y limitar conductas que restringen el mercado o consolidan un poder excesivo. El análisis considera tanto la estructura del mercado y las barreras de entrada como las conductas de las empresas. *Lo hacen fomentando la competencia: prohíben lo
+que la restringe.
+*
 
 == Discriminación de precios
 
 Discriminar precios consiste en cobrar precios distintos por el mismo bien, no explicados por diferencias en el costo de producirlo. La práctica busca capturar parte del excedente del consumidor y requiere poder de mercado, capacidad de segmentar y evitar la reventa entre compradores.
 
+#align(center)[
 #table(
-  columns: (1fr, 1.2fr, 1.3fr, 1.4fr),
-  align: (left, left, left, left),
+  columns: (auto, auto, auto, auto),
+  align: (center, left, left, left),
   stroke: 0.5pt,
   table.header([*Grado*], [*Información del vendedor*], [*Cómo fija los precios*], [*Ejemplos*]),
-  [Primero (perfecta)], [Conoce la disposición a pagar de cada comprador.], [Cobra a cada persona su precio máximo.], [Negociación individual; presupuestos a medida.],
+  [Primero \ (perfecta)], [Conoce la disposición a pagar de cada comprador.], [Cobra a cada persona su precio máximo.], [Negociación individual; presupuestos a medida.],
   [Segundo], [Sabe cómo cambia la disposición a pagar con la cantidad, pero no quién es cada cliente.], [Precios por bloques, cantidades o versiones del producto.], [Descuentos por volumen; tarifas por bloques.],
   [Tercero], [Identifica grupos con distinta elasticidad.], [Cobra más al grupo cuya demanda es menos elástica.], [Descuentos para estudiantes o jubilados; precios por edad.],
-)
+)]
 
 #cuadro-ejemplo(titulo: [Dos grupos con distinta elasticidad])[
   Si los adultos tienen una demanda menos elástica que los estudiantes, la empresa puede cobrarles un precio mayor. Por ejemplo, con costo marginal de $10$, las cantidades y precios óptimos del caso de clase son $2.450$ entradas a $255$ para adultos y $4.500$ a $55$ para estudiantes. Es discriminación de *tercer grado*.
@@ -187,6 +229,7 @@ $ L approx 0.75 quad -> quad abs(E_d) approx 1/L approx 1.33 $
 
 Esta lectura debe tomarse con cautela: el costo de ventas medio no es necesariamente el costo marginal, y el margen bruto no descuenta gastos como investigación y desarrollo ni otros costos fijos. Para evaluar poder de mercado también se necesita evidencia sobre sustitutos, competidores, barreras de entrada y conducta empresarial.
 
+/*
 == Síntesis
 
 - El monopolista enfrenta una demanda decreciente, por lo que $I M g < P$.
@@ -194,3 +237,5 @@ Esta lectura debe tomarse con cautela: el costo de ventas medio no es necesariam
 - Produce menos y cobra más que en competencia, generando una PIE; no tiene curva de oferta.
 - El índice de Lerner relaciona el margen con la elasticidad: $L = (P - C M g)/P = 1/abs(E_d)$.
 - La regulación, los impuestos y la legislación antimonopolio modifican incentivos y resultados; la discriminación permite cobrar precios distintos a compradores o grupos.
+
+ */
