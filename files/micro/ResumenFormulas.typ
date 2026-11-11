@@ -4,7 +4,7 @@
   margin: (x: 1.2cm, y: 1.25cm),
 )
 #set text(size: 10pt, font: "Inter")
-#set par(leading: 0.8em, spacing: 0.75em)
+#set par(leading: 0.8em, spacing: 1em)
 #set list(spacing: 0.8em)
 #show heading.where(level: 1): set text(size: 15pt, fill: rgb("#104e8b"))
 #show heading.where(level: 2): set text(size: 11pt, fill: rgb("#1b6ec2"))
@@ -76,13 +76,13 @@ La asignación eficiente cumple $B M g = C M g$.
 
 === Elasticidades
 
-$E_p = ("%" Delta Q) / ("%" Delta P) = (Delta Q / Q) / (Delta P / P) = (d Q / d P) dot P / Q$
+$E_p = ("%" Delta Q) / ("%" Delta P) = (Delta Q / Q) / (Delta P / P) = ((d Q) / (d P)) dot P / Q$
 
 $E_p^"arco" = ((Q_2 - Q_1) / ((Q_1 + Q_2) / 2)) / ((P_2 - P_1) / ((P_1 + P_2) / 2))$
 
-$E_I = ("%" Delta Q_d) / ("%" Delta I) = (d Q_d / d I) dot I / Q_d$
+$E_I = ("%" Delta Q_d) / ("%" Delta I) = ((d Q_d) / (d I)) dot I / Q_d$
 
-$E_(x y) = ("%" Delta Q_x) / ("%" Delta P_y) = (d Q_x / d P_y) dot P_y / Q_x$
+$E_(x y) = ("%" Delta Q_x) / ("%" Delta P_y) = ((d Q_x) / (d P_y)) dot P_y / Q_x$
 
 La demanda suele dar $E_p < 0$; para clasificar su sensibilidad se usa $|E_p|$. Si $|E_p| > 1$, es elástica; si $|E_p| < 1$, inelástica; si $|E_p| = 1$, unitaria.
 
@@ -104,7 +104,7 @@ $P_c - P_p = t$
 
 $Delta P_c + Delta P_p = t$
 
-$Delta P_c / Delta P_p = E_s / |E_d|$
+$(Delta P_c) / (Delta P_p) = (E_s) / (|E_d|)$
 
 $T = t dot Q_t$
 
@@ -141,9 +141,9 @@ $q = F(K, L)$
 
 $P M e_L = q / L$
 
-$P M g_L = partial q / partial L$
+$P M g_L = (partial q) / (partial L)$
 
-$P M g_K = partial q / partial K$
+$P M g_K = (partial q) / (partial K)$
 
 $d(P M e_L) / d L = (P M g_L - P M e_L) / L$
 
@@ -153,7 +153,7 @@ El producto medio alcanza su máximo cuando $P M g_L = P M e_L$.
 
 $F(K, L) = q_0$
 
-$T M S T = - Delta K / Delta L = P M g_L / P M g_K$
+$T M S T = - (Delta K) / (Delta L) = ( P M g_L) / (P M g_K)$
 
 $d q = P M g_L dot d L + P M g_K dot d K = 0$
 
@@ -182,15 +182,15 @@ $F(lambda K, lambda L) = lambda^(alpha + beta) F(K, L)$
 
 $C T = C F + C V$
 
-$C M g = Delta C T / Delta q = d(C T) / d q$
+$C M g = (Delta C T) / (Delta q) = d(C T) / d q$
 
-$C F M e = C F / q$
+$C F M e = (C F) / q$
 
-$C V M e = C V / q$
+$C V M e = (C V) / q$
 
-$C T M e = C T / q = C F M e + C V M e$
+$C T M e = (C T) / q = C F M e + C V M e$
 
-$C M g = w / P M g_L$
+$C M g = w / (P M g_L)$
 
 $C T_"CP" >= C T_"LP"$
 
@@ -204,9 +204,9 @@ $K = C / r - (w / r) dot L$
 
 $T M S T = w / r$
 
-$P M g_L / w = P M g_K / r$
+$(P M g_L) / w = (P M g_K) / r$
 
-$C M e L P = C T L P / q$
+$C M e L P = (C T L P) / q$
 
 $C M g L P < C M e L P$: el costo medio de largo plazo cae.
 
@@ -234,7 +234,7 @@ $I T(q) = P dot q$
 
 $pi(q) = I T(q) - C T(q) = P dot q - C T(q)$
 
-$d pi / d q = I M g - C M g = 0 quad => quad P = C M g$
+$(d pi) / (d q) = I M g - C M g = 0 quad => quad P = C M g$
 
 $pi = (P - C T M e) q$
 
@@ -277,7 +277,7 @@ La oferta de industria es la suma horizontal de las ofertas de las empresas.
 
 $I T(Q) = P(Q) dot Q$
 
-$I M e = I T / Q = P(Q)$
+$I M e = (I T) / Q = P(Q)$
 
 $I M g = d(I T) / d Q = P + Q dot (d P)/(d Q) < P$
 
@@ -321,7 +321,7 @@ $I M g = P(1 + 1/E_d) = C M g$
 
 $L = -1/E_d = 1/abs(E_d)$
 
-$E_d = (d Q / d P) dot (P / Q)$
+$E_d = ((d Q) / (d P)) dot (P / Q)$
 
 El monopolista elige un punto en el tramo elástico de la demanda: $abs(E_d) > 1$. A menor elasticidad absoluta, mayor margen sobre el costo marginal.
 
